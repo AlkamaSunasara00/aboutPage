@@ -205,7 +205,7 @@ function StickyBlock({ label, titleTop, titleBottom, desc, cta }) {
         </span>
       </h2>
 
-      <p className="mt-12 max-w-xl text-xl leading-relaxed text-neutral-300 font-[Poppins]">
+      <p className="mt-12 max-w-xl text-xl leading-relaxed text-neutral-300 ">
         {desc}
       </p>
 
