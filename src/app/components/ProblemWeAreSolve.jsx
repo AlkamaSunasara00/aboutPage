@@ -7,7 +7,7 @@ const ProblemWeAreSolve = () => {
 
         {/* Section Header */}
         <div className="mb-14">
-          <p className="text-xs uppercase tracking-[4px] text-[var(--color-fourth)] mb-3">
+          <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold mb-3">
             The Problem We Fix
           </p>
 

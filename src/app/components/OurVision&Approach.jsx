@@ -27,7 +27,7 @@ const VisionAndApproach = () => {
   );
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-[var(--color-secondary)] text-[var(--color-primary)]">
+    <section className="py-10 px-6 md:px-12 bg-[var(--color-secondary)] text-[var(--color-primary)]">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
         
         <Card 
