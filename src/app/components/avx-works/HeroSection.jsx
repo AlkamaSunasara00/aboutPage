@@ -91,8 +91,8 @@ export default function HeroSection() {
                 text-[#e5e7eb]
                 bg-[#111318]
                 transition duration-300
-                hover:border-[#60a5fa]
-                hover:text-[#60a5fa]
+                hover:border-[var(--color-fourth)]
+                hover:text-[var(--color-fourth)]
                 hover:bg-[#151922]
                 hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.25)]
               ">
