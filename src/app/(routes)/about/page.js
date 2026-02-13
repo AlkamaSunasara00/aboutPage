@@ -1,14 +1,16 @@
 // app/about/components/FinalCTAAlt.jsx
 
-import ComplianceAndTransparency from "@/app/components/Compliance&Transparency";
-import ConsultantsAndBuyers from "@/app/components/ConsultantsAndBuyers";
-import Cta from "@/app/components/Cta";
-import HeroSection from "@/app/components/HeroSection";
-import HowAvxWorks from "@/app/components/HowAvxWorks";
-import VisionAndApproach from "@/app/components/OurVision&Approach";
-import ProblemWeAreSolve from "@/app/components/ProblemWeAreSolve";
-import TrustSignals from "@/app/components/TrustSignal";
-import WhyAvxDifferent from "@/app/components/WhyAvxDifferent";
+import ComplianceAndTransparency from "@/app/components/about/Compliance&Transparency";
+import ConsultantsAndBuyers from "@/app/components/about/ConsultantsAndBuyers";
+import Cta from "@/app/components/about/Cta";
+import HeroSection from "@/app/components/about/HeroSection";
+import HowAvxWorks from "@/app/components/about/HowAvxWorks";
+import VisionAndApproach from "@/app/components/about/OurVision&Approach";
+import ProblemWeAreSolve from "@/app/components/about/ProblemWeAreSolve";
+import TrustSignals from "@/app/components/about/TrustSignal";
+import WhyAvxDifferent from "@/app/components/about/WhyAvxDifferent";
+
+
 
 
 
