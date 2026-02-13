@@ -37,12 +37,10 @@ export default function HeroSection() {
               px-4 py-1.5
               rounded-full
               border border-[#60a5fa]/30
-              text-[#60a5fa]
-              text-[11px] tracking-[0.25em] uppercase
+             text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold
               bg-[#044596]/10
               backdrop-blur-md
             ">
-              <span className="w-1.5 h-1.5 bg-[#60a5fa] rounded-full animate-pulse" />
               Our Process
             </span>
 

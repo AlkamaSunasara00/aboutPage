@@ -12,8 +12,7 @@
             {/* LEFT — Narrative */}
             <div className="lg:col-span-5">
                 <div className="flex items-center gap-3 mb-8">
-                <div className="h-px w-12 bg-[var(--color-fourth)]" />
-                <span className="text-[var(--color-fourth)] font-semibold tracking-[0.25em] text-xs uppercase">
+                <span className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold">
                     Optional Re-Verification
                 </span>
                 </div>
