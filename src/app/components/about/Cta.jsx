@@ -49,7 +49,7 @@ export default function Cta() {
             <p className="mb-6">
               <span className="
                 bg-black/25
-                text-blue-100
+                text-natural-400
                 px-4 py-1.5
                 rounded-full
                 border border-white/30
@@ -113,7 +113,7 @@ export default function Cta() {
             <p className="mb-6">
               <span className="
                 bg-black/25
-                text-blue-100
+               text-natural-400
                 px-4 py-1.5
                 rounded-full
                 border border-white/30
