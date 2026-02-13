@@ -18,16 +18,16 @@ import AvxStructure from "../components/avx-works/AvxStructure";
 export default function AvxWorksPage() {
     return (
         <>
+          <AvxHero/>
+         <AvxStructure/>
          <VehiclesListed/>
+         <AvxInspectionLayer/>
+          <InteractionSection/>
+         <PerformanceVisibilitySection/>
          <ReVerification/>
-        <AvxHero/>
-        <InteractionSection/>
-        <PerformanceVisibilitySection/>
         <TransactionStructureSection/>
         <AVXJourneySection/>
         <WhyThisMattersSection/>
-          <AvxStructure/>
-          <AvxInspectionLayer/>
           <Cta/>
         </>
     );
