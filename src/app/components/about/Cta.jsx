@@ -37,7 +37,7 @@ export default function Cta() {
               group
               flex-1
               transition-all duration-500 ease-out
-              bg-[var(--color-fourth)]
+              hover:bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)]
               hover:flex-[1.3]
               px-10 py-16 lg:py-20
               text-center
@@ -49,7 +49,7 @@ export default function Cta() {
             <p className="mb-6">
               <span className="
                 bg-black/25
-                text-blue-100
+                text-natural-400
                 px-4 py-1.5
                 rounded-full
                 border border-white/30
@@ -102,7 +102,7 @@ export default function Cta() {
               group
               flex-1
               transition-all duration-500 ease-out
-              bg-[var(--color-fourth)]
+              hover:bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)]
               hover:flex-[1.3]
               px-10 py-16 lg:py-20
               text-center
@@ -113,7 +113,7 @@ export default function Cta() {
             <p className="mb-6">
               <span className="
                 bg-black/25
-                text-blue-100
+               text-natural-400
                 px-4 py-1.5
                 rounded-full
                 border border-white/30
