@@ -7,13 +7,13 @@ import { FcInspection } from "react-icons/fc";
 
 export default function PerformanceVisibilitySection() {
   return (
-    <section className="relative py-28 bg-[var(--color-secondary)] overflow-hidden">
+    <section className="relative bg-[var(--color-secondary)] overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT CONTENT */}
           <div className="max-w-xl space-y-7">
-            <p className="text-xs tracking-[0.28em] uppercase text-[var(--color-third)]">
+            <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold">
               Performance Visibility
             </p>
 

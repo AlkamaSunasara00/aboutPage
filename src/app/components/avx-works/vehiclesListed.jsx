@@ -22,8 +22,7 @@ export default function VehiclesListed() {
                         {/* LEFT CONTENT: Verification System */}
                         <div>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="h-2 w-2 rounded-full bg-[var(--color-fourth)] animate-pulse"></div>
-                                <p className="text-xs tracking-[4px] uppercase text-[var(--color-third)]">
+                                <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold">
                                     Trust Engine
                                 </p>
                             </div>

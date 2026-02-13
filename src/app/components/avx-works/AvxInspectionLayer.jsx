@@ -15,7 +15,7 @@ const ITEMS = [
     {
         id: "engine",
         title: "Engine & drivetrain",
-        desc: "Mechanical performance, transmission health, and drivetrain response.",
+        desc: "Mechanical performance and drivetrain health.",
         icon: Settings,
         angle: 0,
     },
@@ -54,11 +54,11 @@ export default function AvxInspectionLayer() {
 
     return (
         <section className="bg-[#0b0b0b] border-t border-neutral-800">
-            <div className="mx-auto max-w-7xl px-6 py-32">
+            <div className="mx-auto max-w-7xl px-6 py-22">
 
                 {/* HEADER */}
                 <div className="max-w-4xl mb-14">
-                    <p className="text-xs tracking-[0.4em] uppercase text-neutral-500">
+                    <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold">
                         AVX Inspection Layer
                     </p>
 
@@ -213,9 +213,9 @@ function KeyPoint({ title, desc }) {
 }
 
 function SignalPoint({ index, title, desc }) {
-  return (
-    <div
-      className="
+    return (
+        <div
+            className="
         group relative rounded-2xl
         border border-neutral-800
         bg-gradient-to-b from-[#101010] to-[#090909]
@@ -224,10 +224,10 @@ function SignalPoint({ index, title, desc }) {
         hover:border-[var(--color-fourth)]
         hover:translate-y-[-2px]
       "
-    >
-      {/* SYSTEM MARKER */}
-      <div
-        className="
+        >
+            {/* SYSTEM MARKER */}
+            <div
+                className="
           absolute -top-3 left-6
           px-3 py-1 rounded-full
           text-xs tracking-widest uppercase
@@ -238,25 +238,25 @@ function SignalPoint({ index, title, desc }) {
           group-hover:border-[var(--color-fourth)]
           group-hover:text-[var(--color-fourth)]
         "
-      >
-        {index}
-      </div>
+            >
+                {index}
+            </div>
 
-      {/* CONTENT */}
-      <h4
-        className="
+            {/* CONTENT */}
+            <h4
+                className="
           mt-4 text-xl font-semibold
           text-white
           transition-colors duration-300
           group-hover:text-[var(--color-fourth)]
         "
-      >
-        {title}
-      </h4>
+            >
+                {title}
+            </h4>
 
-      <p className="mt-3 text-neutral-400 leading-relaxed">
-        {desc}
-      </p>
-    </div>
-  );
+            <p className="mt-3 text-neutral-400 leading-relaxed">
+                {desc}
+            </p>
+        </div>
+    );
 }

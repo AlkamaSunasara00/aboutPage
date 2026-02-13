@@ -12,7 +12,7 @@ export default function TransactionStructureSection() {
 
         {/* ===== HEADER ===== */}
         <div className="max-w-3xl mb-8">
-          <p className="text-xs tracking-[0.28em] uppercase text-[var(--color-third)] mb-4">
+          <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold mb-4">
             Transaction Structure
           </p>
 
