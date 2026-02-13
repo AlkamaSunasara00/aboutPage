@@ -15,7 +15,7 @@ export default function Cta() {
             font-[Montserrat]
           ">
             Ready to explore better
-            <span className="block mt-3 text-white/60">
+            <span className="block mt-3 text-[var(--color-fourth)]">
               used vehicles?
             </span>
           </h2>
@@ -63,7 +63,7 @@ export default function Cta() {
             <p className="
               text-2xl sm:text-3xl
               font-semibold
-              text-white
+              text-[var(--color-fourth)]
               font-[Montserrat]
             ">
               Browse Vehicles
@@ -127,7 +127,7 @@ export default function Cta() {
             <p className="
               text-2xl sm:text-3xl
               font-semibold
-              text-white
+              text-[var(--color-fourth)]
               font-[Montserrat]
             ">
               Become a Consultant
