@@ -79,7 +79,7 @@ export default function TransactionStructureSection() {
           <div className="
             rounded-2xl border border-white/10
             bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)] p-6 backdrop-blur-xl
-            text-left hover:border-blue-400/30 transition hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.25)]
+            text-left hover:border-blue-400/30 transition hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]
           ">
             <FiUsers className="text-2xl text-[var(--color-fourth)] mb-4" />
             <h3 className="text-white font-semibold mb-2">
@@ -94,7 +94,7 @@ export default function TransactionStructureSection() {
           <div className="
             rounded-2xl border border-white/10
             bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)] p-6 backdrop-blur-xl
-            text-left hover:border-blue-400/30 transition hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.25)]
+            text-left hover:border-blue-400/30 transition hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]
           ">
             <HiOutlineScale className="text-2xl text-[var(--color-fourth)] mb-4" />
             <h3 className="text-white font-semibold mb-2">
@@ -109,7 +109,7 @@ export default function TransactionStructureSection() {
           <div className="
             rounded-2xl border border-white/10
             bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)] p-6 backdrop-blur-xl
-            text-left hover:border-blue-400/30 transition hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.25)]
+            text-left hover:border-blue-400/30 transition hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]
           ">
             <MdOutlinePayments className="text-2xl text-[var(--color-fourth)] mb-4" />
             <h3 className="text-white font-semibold mb-2">
