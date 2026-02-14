@@ -19,7 +19,7 @@ const ComplianceAndTransparency = () => {
           <div className="
             relative
             rounded-3xl
-            border border-white/10
+            border border-primary/10
             bg-[#0d0f14]
             px-8 py-12 md:px-14 md:py-16
            hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.25)]
@@ -35,9 +35,9 @@ const ComplianceAndTransparency = () => {
                   h-20 w-20
                   rounded-2xl
                   bg-gradient-to-br
-                  from-[var(--color-fourth)]/20
+                  from-fourth/20
                   to-transparent
-                  border border-[var(--color-fourth)]/30
+                  border border-fourth/30
                   flex items-center justify-center
                 ">
 
@@ -46,7 +46,7 @@ const ComplianceAndTransparency = () => {
                     height="40"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="var(--color-fourth)"
+                    stroke="currentColor"
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -63,7 +63,7 @@ const ComplianceAndTransparency = () => {
               <div className="flex-1">
 
                 <h4 className="
-                  text-[var(--color-fourth)]
+                  text-fourth
                   font-semibold
                   uppercase
                   tracking-[0.4em]
@@ -74,14 +74,14 @@ const ComplianceAndTransparency = () => {
                 </h4>
 
                 <p className="
-                  text-white
+                  text-primary
                   text-lg md:text-xl
                   leading-relaxed
-                  font-[var(--font-secondary)]
+                  font-secondary
                 ">
                   AVX is a marketplace platform. Transactions, pricing, and
                   negotiation occur{" "}
-                  <span className="text-[var(--color-fourth)] font-semibold">
+                  <span className="text-fourth font-semibold">
                     directly
                   </span>{" "}
                   between buyers and consultants. AVX does not hold or process
@@ -90,7 +90,7 @@ const ComplianceAndTransparency = () => {
 
                 <p className="
                   mt-8
-                  text-[var(--color-fourth)]
+                  text-fourth
                   font-semibold
                   uppercase
                   tracking-widest
@@ -109,18 +109,18 @@ const ComplianceAndTransparency = () => {
         {/* ===== LEGAL FOOTER ===== */}
         <div className="mt-12 flex items-center justify-center gap-8">
 
-          <div className="h-px w-24 bg-gradient-to-r from-transparent via-[var(--color-fourth)]/40 to-transparent" />
+          <div className="h-px w-24 bg-gradient-to-r from-transparent via-fourth/40 to-transparent" />
 
           <span className="
             text-[11px]
             uppercase
             tracking-[0.45em]
-            text-white/50
+            text-primary/50
           ">
             Legal Independence Verified
           </span>
 
-          <div className="h-px w-24 bg-gradient-to-r from-transparent via-[var(--color-fourth)]/40 to-transparent" />
+          <div className="h-px w-24 bg-gradient-to-r from-transparent via-fourth/40 to-transparent" />
 
         </div>
 

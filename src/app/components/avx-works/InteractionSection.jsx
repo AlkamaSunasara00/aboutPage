@@ -23,9 +23,9 @@ export default function InteractionSection() {
             Buyer & Consultant Interaction
           </p>
 
-          <h2 className="mt-6 text-5xl font-medium leading-tight text-white">
+          <h2 className="mt-6 text-5xl font-medium leading-tight text-primary">
             Direct Communication
-            <span className="block text-[var(--color-fourth)]">
+            <span className="block text-fourth">
               Platform Accountability
             </span>
           </h2>
@@ -46,8 +46,8 @@ export default function InteractionSection() {
             className={`
               px-4 py-1.5 rounded-full text-sm font-semibold cursor-pointer transition
               ${activeRole === "buyer"
-                ? "bg-white text-secondary"
-                : "bg-neutral-800 text-white"
+                ? "bg-primary text-secondary"
+                : "bg-neutral-800 text-primary"
               }
             `}
           >
@@ -89,19 +89,19 @@ export default function InteractionSection() {
                   px-5 py-4
                   border transition
                   ${activeRole === "buyer"
-                    ? "bg-[#262626] border-white"
+                    ? "bg-[#262626] border-primary"
                     : "bg-[#1c1c1c] border-neutral-700"
                   }
                 `}
               >
                 <div className="mb-1">
-                  <span className="inline-block px-2.5 py-0.5 rounded-md text-xs font-semibold bg-neutral-700 text-white">
+                  <span className="inline-block px-2.5 py-0.5 rounded-md text-xs font-semibold bg-neutral-700 text-primary">
                     BUYER
                   </span>
                 </div>
 
 
-                <p className="text-white leading-relaxed">
+                <p className="text-primary leading-relaxed">
                   Requesting inspection clarity and confirmation of odometer consistency.
                 </p>
 

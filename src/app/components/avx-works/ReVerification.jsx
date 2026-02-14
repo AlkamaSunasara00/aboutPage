@@ -20,7 +20,7 @@
                 <h2 className="text-4xl md:text-5xl font-semibold leading-tight mb-6">
                 Additional assurance,
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-fourth)] to-[#60a5fa]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-fourth to-[#60a5fa]">
                     when you need it.
                 </span>
                 </h2>
@@ -30,7 +30,7 @@
                 can request deeper verification for total peace of mind.
                 </p>
 
-                <p className="text-sm italic text-third mt-6 border-l border-[var(--color-fourth)] pl-4">
+                <p className="text-sm italic text-third mt-6 border-l border-fourth pl-4">
                 Because confidence is not one-size-fits-all.
                 </p>
             </div>
@@ -39,24 +39,24 @@
             <div className="lg:col-span-7 space-y-6">
                 
                 {/* CARD */}
-                <div className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-transparent hover:from-[var(--color-fourth)]/40 transition-all duration-500">
+                <div className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-primary/10 via-primary/5 to-transparent hover:from-fourth/40 transition-all duration-500">
                 <div className="relative rounded-2xl bg-secondary p-7 md:p-8 flex flex-col md:flex-row gap-6 items-start md:items-center">
                     
                     {/* icon */}
-                    <div className="w-16 h-16 shrink-0 bg-[var(--color-fourth)]/10 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-[var(--color-fourth)]/20">
-                    <Scan className="text-[var(--color-fourth)]" size={30} />
+                    <div className="w-16 h-16 shrink-0 bg-fourth/10 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-fourth/20">
+                    <Scan className="text-fourth" size={30} />
                     </div>
 
                     {/* content */}
                     <div className="flex-grow">
                     <div className="flex items-center gap-2 mb-2">
-                        <span className="w-2 h-2 rounded-full bg-[var(--color-fourth)] animate-pulse" />
-                        <span className="text-[10px] tracking-widest uppercase text-[var(--color-fourth)] font-semibold">
+                        <span className="w-2 h-2 rounded-full bg-fourth animate-pulse" />
+                        <span className="text-[10px] tracking-widest uppercase text-fourth font-semibold">
                         Available
                         </span>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-[var(--color-primary)] mb-2">
+                    <h3 className="text-xl font-semibold text-primary mb-2">
                         Fresh inspection
                     </h3>
 
@@ -67,19 +67,19 @@
                     </div>
 
                     {/* arrow */}
-                    <button className="shrink-0 p-3 rounded-xl border border-white/10 text-third transition-all duration-300 group-hover:text-white group-hover:border-[var(--color-fourth)] group-hover:bg-[var(--color-fourth)]/10">
+                    <button className="shrink-0 p-3 rounded-xl border border-primary/10 text-third transition-all duration-300 group-hover:text-primary group-hover:border-fourth group-hover:bg-fourth/10">
                     <ArrowUpRight size={18} />
                     </button>
                 </div>
                 </div>
 
                 {/* CARD */}
-                <div className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-transparent hover:from-[var(--color-fourth)]/40 transition-all duration-500">
+                <div className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-primary/10 via-primary/5 to-transparent hover:from-fourth/40 transition-all duration-500">
                 <div className="relative rounded-2xl bg-secondary p-7 md:p-8 flex flex-col md:flex-row gap-6 items-start md:items-center">
                     
                     {/* icon */}
-                    <div className="w-16 h-16 shrink-0 bg-[var(--color-fourth)]/10 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-[var(--color-fourth)]/20">
-                    <Video className="text-[var(--color-fourth)]" size={30} />
+                    <div className="w-16 h-16 shrink-0 bg-fourth/10 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-fourth/20">
+                    <Video className="text-fourth" size={30} />
                     </div>
 
                     {/* content */}
@@ -91,7 +91,7 @@
                         </span>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-[var(--color-primary)] mb-2">
+                    <h3 className="text-xl font-semibold text-primary mb-2">
                         Video walkthrough
                     </h3>
 
@@ -102,7 +102,7 @@
                     </div>
 
                     {/* arrow */}
-                    <button className="shrink-0 p-3 rounded-xl border border-white/10 text-third transition-all duration-300 group-hover:text-white group-hover:border-[var(--color-fourth)] group-hover:bg-[var(--color-fourth)]/10">
+                    <button className="shrink-0 p-3 rounded-xl border border-primary/10 text-third transition-all duration-300 group-hover:text-primary group-hover:border-fourth group-hover:bg-fourth/10">
                     <ArrowUpRight size={18} />
                     </button>
                 </div>
@@ -110,7 +110,7 @@
 
                 {/* footer */}
                 <div className="flex items-center gap-2 pt-2 opacity-70">
-                <ShieldCheck size={15} className="text-[var(--color-fourth)]" />
+                <ShieldCheck size={15} className="text-fourth" />
                 <span className="text-[11px] tracking-wide uppercase text-third">
                     Verified by AVX
                 </span>

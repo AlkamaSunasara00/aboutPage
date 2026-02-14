@@ -40,7 +40,7 @@ export default function WhyAvxDifferent() {
           </p>
 
           <h2 className="text-4xl sm:text-5xl xl:text-5xl font-medium">
-            Not another  <span className=" text-[var(--color-fourth)]">   listing platform</span>
+            Not another  <span className=" text-fourth">   listing platform</span>
           </h2>
 
           <p className="mt-8 text-xl text-third  leading-relaxed">
@@ -65,14 +65,14 @@ export default function WhyAvxDifferent() {
                 <div
                   className={`absolute top-1/2 -translate-y-1/2 text-[10rem] font-bold select-none pointer-events-none transition-colors duration-300
           ${isLeftContent ? "md:right-0 md:left-auto" : "md:left-0 md:right-auto"}
-          text-white/5 group-hover:text-[var(--color-fourth)]/30`}
+          text-white/5 group-hover:text-fourth/30`}
                 >
                   {item.id}
                 </div>
 
                 {/* Content */}
-                <div className="relative max-w-xl border rounded-2xl border-transparent p-6 transition-colors duration-300 group-hover:border-[var(--color-fourth)]">
-                  <h3 className="text-2xl md:text-3xl font-semibold text-[var(--color-primary)]">
+                <div className="relative max-w-xl border rounded-2xl border-transparent p-6 transition-colors duration-300 group-hover:border-fourth">
+                  <h3 className="text-2xl md:text-3xl font-semibold text-primary">
                     {item.title}
                   </h3>
                   <p className="mt-4 text-lg text-third leading-relaxed">
@@ -85,7 +85,7 @@ export default function WhyAvxDifferent() {
                 <div
                   className={`hidden md:block h-px flex-1 transition-colors duration-300
           ${isLeftContent ? "bg-neutral-700" : "bg-neutral-700"}
-          group-hover:bg-[var(--color-fourth)]/60`}
+          group-hover:bg-fourth/60`}
                 />
               </div>
             );

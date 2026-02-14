@@ -16,9 +16,9 @@ export default function PerformanceVisibilitySection() {
                 Performance Visibility
               </p>
 
-              <h2 className="text-3xl md:text-[42px] font-bold text-white leading-tight">
+              <h2 className="text-3xl md:text-[42px] font-bold text-primary leading-tight">
                 Consultant Storefronts with
-                <span className="block text-[var(--color-fourth)]">
+                <span className="block text-fourth">
                   Accountability
                 </span>
               </h2>
@@ -48,8 +48,8 @@ export default function PerformanceVisibilitySection() {
                 "Response time indicators",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-[var(--color-fourth)] rounded-full" />
-                  <p className="text-sm text-white/90">{item}</p>
+                  <div className="w-2 h-2 bg-fourth rounded-full" />
+                  <p className="text-sm text-primary/90">{item}</p>
                 </div>
               ))}
             </div>
@@ -99,11 +99,11 @@ function Metric({ icon, title, desc }) {
   return (
     <motion.div
       whileHover={{ y: -4 }}
-      className="p-5 rounded-xl border hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)] border-white/10 bg-secondary/80 backdrop-blur-xl hover:border-blue-400/40 transition hover:bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)]"
+      className="p-5 rounded-xl border hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)] border-primary/10 bg-secondary/80 backdrop-blur-xl hover:border-blue-400/40 transition hover:bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)]"
     >
       <div className="text-xl mb-3">{icon}</div>
 
-      <p className="text-white font-semibold text-sm">{title}</p>
+      <p className="text-primary font-semibold text-sm">{title}</p>
       <p className="text-[13px] text-third mt-1 leading-relaxed">
         {desc}
       </p>
