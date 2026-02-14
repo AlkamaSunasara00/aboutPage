@@ -31,13 +31,13 @@ const steps = [
 
 export default function AVXJourneySection() {
   return (
-    <section className="relative py-28 bg-[var(--color-secondary)] overflow-hidden">
+    <section className="relative py-20 bg-[var(--color-secondary)] overflow-hidden">
 
       <div className="relative max-w-5xl mx-auto px-6">
 
         {/* HEADER */}
         <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.3em] uppercase text-[var(--color-third)] mb-4">
+          <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold mb-4">
             The Complete Journey
           </p>
 

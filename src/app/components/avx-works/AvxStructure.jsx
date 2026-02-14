@@ -12,7 +12,7 @@ export default function AvxStructure() {
 
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-15">
-          <p className="text-xs tracking-[0.4em] uppercase text-neutral-500">
+          <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold">
             The AVX Structure
           </p>
 

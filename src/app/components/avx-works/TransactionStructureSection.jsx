@@ -6,13 +6,13 @@ import { MdOutlinePayments } from "react-icons/md";
 
 export default function TransactionStructureSection() {
   return (
-    <section className="relative py-10 bg-[var(--color-secondary)] overflow-hidden">
+    <section className="relative py-20 bg-[var(--color-secondary)] overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-6">
 
         {/* ===== HEADER ===== */}
         <div className="max-w-3xl mb-8">
-          <p className="text-xs tracking-[0.28em] uppercase text-[var(--color-third)] mb-4">
+          <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold mb-4">
             Transaction Structure
           </p>
 

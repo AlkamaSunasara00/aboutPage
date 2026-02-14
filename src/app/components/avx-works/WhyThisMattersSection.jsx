@@ -25,7 +25,7 @@ export default function WhyThisMattersSection() {
   ];
 
   return (
-    <section className="relative py-32 bg-[var(--color-secondary)] overflow-hidden">
+    <section className="relative pt-10 pb-13 bg-[var(--color-secondary)] overflow-hidden">
       {/* HORIZON LIGHT */}
       <div
         className="
@@ -49,7 +49,7 @@ export default function WhyThisMattersSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT */}
           <div className="space-y-8 max-w-xl">
-            <p className="text-xs tracking-[0.35em] uppercase text-[var(--color-third)]">
+            <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold">
               Why This Matters
             </p>
 

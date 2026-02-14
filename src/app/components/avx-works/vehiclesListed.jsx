@@ -1,5 +1,6 @@
 "use client";
 
+
 import { CheckCircle2, ShieldCheck, UserCheck, FileText, MapPin, Search } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -22,8 +23,7 @@ export default function VehiclesListed() {
                         {/* LEFT CONTENT: Verification System */}
                         <div>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="h-2 w-2 rounded-full bg-[var(--color-fourth)] animate-pulse"></div>
-                                <p className="text-xs tracking-[4px] uppercase text-[var(--color-third)]">
+                                <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold">
                                     Trust Engine
                                 </p>
                             </div>
@@ -108,8 +108,8 @@ export default function VehiclesListed() {
     <div className="relative p-3 pb-0">
       <div className="rounded-[16px] overflow-hidden border border-white/10">
         <img
-          src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1200&auto=format&fit=crop"
-          alt="Maruti Fronx"
+          src="/car-image.jpg"
+          alt="Chevrolet Camaro"
           className="w-full h-[190px] object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
       </div>
@@ -136,7 +136,7 @@ export default function VehiclesListed() {
     {/* CONTENT */}
     <div className="px-5 pt-4 pb-5">
       <h3 className="text-[20px] font-semibold text-white tracking-tight mb-2">
-        Maruti Fronx
+       Chevrolet Camaro
       </h3>
 
       <p className="text-[13px] text-white/65 mb-2">
@@ -151,7 +151,7 @@ export default function VehiclesListed() {
       <div className="flex flex-wrap gap-x-3 gap-y-1 text-[13px] text-white/65 mb-4">
         <span>2022</span>
         <span>• Manual</span>
-        <span>• Diesel</span>
+        <span>• petrol</span>
         <span>• 5</span>
       </div>
 
@@ -193,7 +193,6 @@ export default function VehiclesListed() {
   </div>
 
   {/* ambient glow */}
-  <div className="absolute -z-10 inset-0 blur-[90px] opacity-30 bg-[var(--color-fourth)] rounded-full translate-x-10 translate-y-10" />
 </motion.div>
 
 

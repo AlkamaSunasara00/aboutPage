@@ -11,7 +11,7 @@ export default function InteractionSection() {
           {/* LEFT */}
           <div className="max-w-xl space-y-7">
 
-            <p className="text-xs tracking-[0.28em] uppercase text-[var(--color-third)]">
+            <p className="text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold">
               Buyer & Consultant Interaction
             </p>
 
