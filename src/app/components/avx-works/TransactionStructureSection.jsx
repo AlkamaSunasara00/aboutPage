@@ -16,9 +16,9 @@ export default function TransactionStructureSection() {
             Transaction Structure
           </p>
 
-          <h2 className="text-3xl md:text-[42px] font-bold leading-tight text-white mb-5">
+          <h2 className="text-3xl md:text-[42px] font-bold leading-tight text-primary mb-5">
             Marketplace
-            <span className="block text-[var(--color-fourth)]">
+            <span className="block text-fourth">
               Transparency
             </span>
           </h2>
@@ -35,7 +35,7 @@ export default function TransactionStructureSection() {
               through verified listings, performance metrics, and transparent activity visibility.
             </p>
 
-            <p className="text-[15px] text-white leading-relaxed">
+            <p className="text-[15px] text-primary leading-relaxed">
               Vehicle pricing, negotiation, and transaction settlement occur directly between
               buyers and consultants.
             </p>
@@ -55,9 +55,9 @@ export default function TransactionStructureSection() {
               shadow-xl
             ">
 
-              <p className="text-white text-lg leading-relaxed">
+              <p className="text-primary text-lg leading-relaxed">
                 AVX does
-                <span className="text-[var(--color-fourth)] font-semibold"> not process payments </span>
+                <span className="text-fourth font-semibold"> not process payments </span>
                  between parties.
               </p>
 
@@ -77,12 +77,12 @@ export default function TransactionStructureSection() {
 
           {/* Card 1 */}
           <div className="
-            rounded-2xl border border-white/10
+            rounded-2xl border border-primary/10
             bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)] p-6 backdrop-blur-xl
             text-left hover:border-blue-400/30 transition hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]
           ">
-            <FiUsers className="text-2xl text-[var(--color-fourth)] mb-4" />
-            <h3 className="text-white font-semibold mb-2">
+            <FiUsers className="text-2xl text-fourth mb-4" />
+            <h3 className="text-primary font-semibold mb-2">
               Marketplace Connector
             </h3>
             <p className="text-sm text-[var(--color-third)]">
@@ -92,12 +92,12 @@ export default function TransactionStructureSection() {
 
           {/* Card 2 */}
           <div className="
-            rounded-2xl border border-white/10
+            rounded-2xl border border-primary/10
             bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)] p-6 backdrop-blur-xl
             text-left hover:border-blue-400/30 transition hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]
           ">
-            <HiOutlineScale className="text-2xl text-[var(--color-fourth)] mb-4" />
-            <h3 className="text-white font-semibold mb-2">
+            <HiOutlineScale className="text-2xl text-fourth mb-4" />
+            <h3 className="text-primary font-semibold mb-2">
               Transparent Negotiation
             </h3>
             <p className="text-sm text-[var(--color-third)]">
@@ -107,12 +107,12 @@ export default function TransactionStructureSection() {
 
           {/* Card 3 */}
           <div className="
-            rounded-2xl border border-white/10
+            rounded-2xl border border-primary/10
             bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)] p-6 backdrop-blur-xl
             text-left hover:border-blue-400/30 transition hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]
           ">
-            <MdOutlinePayments className="text-2xl text-[var(--color-fourth)] mb-4" />
-            <h3 className="text-white font-semibold mb-2">
+            <MdOutlinePayments className="text-2xl text-fourth mb-4" />
+            <h3 className="text-primary font-semibold mb-2">
               No Payment Handling
             </h3>
             <p className="text-sm text-[var(--color-third)]">

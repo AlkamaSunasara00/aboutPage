@@ -137,7 +137,7 @@ export default function ConsultantsAndBuyers() {
             {/* Slider */}
             <div
               ref={sliderRef}
-              className="absolute top-1 left-1 h-[calc(100%-8px)] rounded-full bg-white transition-all duration-300"
+              className="absolute top-1 left-1 h-[calc(100%-8px)] rounded-full bg-primary transition-all duration-300"
             />
 
             <button
@@ -146,7 +146,7 @@ export default function ConsultantsAndBuyers() {
               className={`relative z-10 px-8 py-3 text-sm uppercase tracking-widest transition
                 ${active === "buyers"
                   ? "text-black"
-                  : "text-neutral-300 hover:text-white"}`}
+                  : "text-neutral-300 hover:text-primary"}`}
             >
               For Buyers
             </button>
@@ -157,7 +157,7 @@ export default function ConsultantsAndBuyers() {
               className={`relative z-10 px-10 py-3 text-sm uppercase tracking-widest transition
                 ${active === "consultants"
                   ? "text-black"
-                  : "text-neutral-300 hover:text-white"}`}
+                  : "text-neutral-300 hover:text-primary"}`}
             >
               For Consultants
             </button>
@@ -193,14 +193,14 @@ export default function ConsultantsAndBuyers() {
 function StickyBlock({ label, titleTop, titleBottom, desc, cta }) {
   return (
     <div className="lg:sticky lg:top-32 h-fit">
-      <p className="mb-8 inline-block text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold relative">
+      <p className="mb-8 inline-block text-sm tracking-[0.4em] uppercase text-third font-semibold relative">
         {label}
         <span className="absolute left-0 -bottom-3 h-[2px] w-16 bg-gradient-to-r from-neutral-100 to-transparent" />
       </p>
 
-      <h2 className="text-4xl sm:text-5xl xl:text-5xl font-medium leading-[1.15] text-white font-[Montserrat]">
+      <h2 className="text-4xl sm:text-5xl xl:text-5xl font-medium leading-[1.15] text-primary font-[Montserrat]">
         {titleTop}
-        <span className="block  text-[var(--color-fourth)] mt-2">
+        <span className="block  text-fourth mt-2">
           {titleBottom}
         </span>
       </h2>
@@ -212,7 +212,7 @@ function StickyBlock({ label, titleTop, titleBottom, desc, cta }) {
       <div className="mt-20">
         <a
           href={cta.href}
-          className="inline-flex items-center gap-2 text-lg text-white underline underline-offset-8 decoration-neutral-600 hover:decoration-neutral-300 transition"
+          className="inline-flex items-center gap-2 text-lg text-primary underline underline-offset-8 decoration-neutral-600 hover:decoration-neutral-300 transition"
         >
           {cta.text}
         </a>
@@ -224,12 +224,12 @@ function StickyBlock({ label, titleTop, titleBottom, desc, cta }) {
 function Capability({ title, desc, icon }) {
   return (
     <div className="border-l border-neutral-700 pl-10 flex gap-6">
-      <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[var(--color-fourth)] text-[var(--color-fourth)]">
+      <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-fourth text-fourth">
         {icon}
       </div>
 
       <div>
-        <h3 className="text-2xl font-medium text-white">
+        <h3 className="text-2xl font-medium text-primary">
           {title}
         </h3>
         <p className="mt-4 text-lg leading-relaxed text-neutral-400">

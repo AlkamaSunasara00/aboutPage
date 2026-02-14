@@ -41,11 +41,11 @@ export default function AVXJourneySection() {
             The Complete Journey
           </p>
 
-          <h2 className="text-3xl md:text-[42px] font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-[42px] font-bold text-primary mb-4">
             The AVX Buying Flow
           </h2>
 
-          <p className="text-[var(--color-fourth)] max-w-xl mx-auto text-[14px]">
+          <p className="text-fourth max-w-xl mx-auto text-[14px]">
             Structured. Transparent. Accountable.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function AVXJourneySection() {
           <div className="
             absolute left-1/2 top-0 bottom-0
             w-[2px]
-            bg-[var(--color-fourth)]
+            bg-fourth
             opacity-60
           " />
 
@@ -91,11 +91,11 @@ export default function AVXJourneySection() {
                   transition
                 ">
 
-                  <p className="text-[var(--color-fourth)] text-sm font-medium">
+                  <p className="text-fourth text-sm font-medium">
                     Step {i + 1}
                   </p>
 
-                  <p className="text-white text-[22px] font-semibold mt-2">
+                  <p className="text-primary text-[22px] font-semibold mt-2">
                     {step.title}
                   </p>
 

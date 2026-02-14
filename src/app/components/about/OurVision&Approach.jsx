@@ -11,7 +11,7 @@ const VisionAndApproach = () => {
       `}
     >
       <h2 className="text-3xl font-bold mb-4">
-        {title} <span className="text-[var(--color-fourth)]">{highlight}</span>
+        {title} <span className="text-fourth">{highlight}</span>
       </h2>
 
       <p className="text-[var(--color-third)] leading-relaxed relative z-10">
@@ -19,15 +19,15 @@ const VisionAndApproach = () => {
       </p>
 
       {/* The Animated Line: Starts at 0 width and expands on hover */}
-      <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[var(--color-fourth)] transition-all duration-500 ease-out group-hover:w-full"></div>
+      <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-fourth transition-all duration-500 ease-out group-hover:w-full"></div>
       
       {/* Subtle Glow Effect on Hover */}
-      <div className="absolute -inset-px bg-[var(--color-fourth)] opacity-0 blur-lg transition-opacity duration-500 group-hover:opacity-10 -z-10"></div>
+      <div className="absolute -inset-px bg-fourth opacity-0 blur-lg transition-opacity duration-500 group-hover:opacity-10 -z-10"></div>
     </div>
   );
 
   return (
-    <section className="py-10 px-6 md:px-12 bg-[var(--color-secondary)] text-[var(--color-primary)]">
+    <section className="py-10 px-6 md:px-12 bg-[var(--color-secondary)] text-primary">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
         
         <Card 

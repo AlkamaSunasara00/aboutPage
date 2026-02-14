@@ -19,13 +19,13 @@ export default function HeroSection() {
               text-4xl sm:text-5xl xl:text-6xl
               font-semibold
               leading-[1.05]
-              text-[var(--color-primary)]
+              text-primary
               font-[Montserrat]
             "
             >
               India's Premium
               <br />
-              <span className="text-white/70">Pre-Owned Vehicle Platform</span>
+              <span className="text-primary/70">Pre-Owned Vehicle Platform</span>
             </h1>
 
             <p className="mt-8 text-lg text-[var(--color-third)] max-w-lg leading-relaxed">
@@ -41,8 +41,8 @@ export default function HeroSection() {
                 className="
                   px-7 py-4
                   rounded-xl
-                  bg-[var(--color-fourth)]
-                  text-white
+                  bg-fourth
+                  text-primary
                   font-medium
                   transition-all duration-300
                   hover:scale-[1.04]
@@ -69,10 +69,10 @@ export default function HeroSection() {
       px-7 py-3.5
       rounded-full
       bg-[var(--color-secondary)]
-      text-white/90
+      text-primary/90
       font-medium
       transition-all duration-300
-      hover:text-white
+      hover:text-primary
     "
                 >
                   Become Consultant

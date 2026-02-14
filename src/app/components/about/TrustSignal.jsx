@@ -10,13 +10,13 @@ export default function TrustSignals() {
                     {/* LEFT — CONTEXT */}
                     <div>
                         <p className="mb-6 inline-flex items-center gap-3 text-sm tracking-[0.4em] uppercase text-[var(--color-third)] font-semibold">
-                            <span className="h-[2px] w-10 bg-[var(--color-fourth)]" />
+                            <span className="h-[2px] w-10 bg-fourth" />
                             Built for Accountability
                         </p>
 
-                        <h2 className="text-4xl sm:text-5xl xl:text-5xl font-medium leading-tight text-[var(--color-primary)]">
+                        <h2 className="text-4xl sm:text-5xl xl:text-5xl font-medium leading-tight text-primary">
                             Trust is built
-                            <span className="block text-[var(--color-fourth)] mt-2">
+                            <span className="block text-fourth mt-2">
                                 through measurable signals
                             </span>
                         </h2>
@@ -47,10 +47,10 @@ export default function TrustSignals() {
                         <span className="absolute top-1/2 right-0 w-[40%] h-px bg-neutral-600/50" />
 
                         {/* AXIS END TICKS */}
-                        <span className="absolute left-1/2 top-0 h-3 w-[2px] bg-[var(--color-fourth)] -translate-x-1/2" />
-                        <span className="absolute left-1/2 bottom-0 h-3 w-[2px] bg-[var(--color-fourth)] -translate-x-1/2" />
-                        <span className="absolute left-0 top-1/2 w-3 h-[2px] bg-[var(--color-fourth)] -translate-y-1/2" />
-                        <span className="absolute right-0 top-1/2 w-3 h-[2px] bg-[var(--color-fourth)] -translate-y-1/2" />
+                        <span className="absolute left-1/2 top-0 h-3 w-[2px] bg-fourth -translate-x-1/2" />
+                        <span className="absolute left-1/2 bottom-0 h-3 w-[2px] bg-fourth -translate-x-1/2" />
+                        <span className="absolute left-0 top-1/2 w-3 h-[2px] bg-fourth -translate-y-1/2" />
+                        <span className="absolute right-0 top-1/2 w-3 h-[2px] bg-fourth -translate-y-1/2" />
 
                         {/* CENTER SQUARE (OUTER) */}
                         <span className="absolute left-1/2 top-1/2 h-6 w-6 bg-neutral-500 -translate-x-1/2 -translate-y-1/2 z-10" />
@@ -62,7 +62,7 @@ export default function TrustSignals() {
 
                         {/* TOP RIGHT */}
                         <div className="absolute top-[20%] right-[23%]">
-                            <div className="text-2xl font-semibold text-[var(--color-fourth)]">
+                            <div className="text-2xl font-semibold text-fourth">
                                 100K+
                             </div>
                             <p className="mt-1 text-m text-[var(--color-third)]">
@@ -72,7 +72,7 @@ export default function TrustSignals() {
 
                         {/* TOP LEFT */}
                         <div className="absolute top-[20%] left-[12%] text-right">
-                            <div className="text-2xl font-semibold text-[var(--color-fourth)]">
+                            <div className="text-2xl font-semibold text-fourth">
                                 10K+
                             </div>
                             <p className="mt-1 text-m text-[var(--color-third)]">
@@ -82,7 +82,7 @@ export default function TrustSignals() {
 
                         {/* BOTTOM LEFT */}
                         <div className="absolute bottom-[20%] left-[17.5%]">
-                            <div className="text-2xl font-semibold text-[var(--color-fourth)] text-end">
+                            <div className="text-2xl font-semibold text-fourth text-end">
                                 Growing
                             </div>
                             <p className="mt-1 text-m text-[var(--color-third)]">
@@ -92,7 +92,7 @@ export default function TrustSignals() {
 
                         {/* BOTTOM RIGHT */}
                         <div className="absolute bottom-[20%] right-[18%]">
-                            <div className="text-2xl font-semibold text-[var(--color-fourth)]">
+                            <div className="text-2xl font-semibold text-fourth">
                                 In Progress
                             </div>
                             <p className="mt-1 text-m text-[var(--color-third)]">

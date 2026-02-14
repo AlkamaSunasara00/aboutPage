@@ -63,7 +63,7 @@ export default function HeroSection() {
               <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.05] text-[#f8fafc] tracking-tight">
                 How AVX
               </h1>
-              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.05] tracking-tight text-[var(--color-fourth)]">
+              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.05] tracking-tight text-fourth">
                 Works
               </h1>
             </div>
@@ -74,14 +74,14 @@ export default function HeroSection() {
               accountability.
             </p>
 
-            <div className="w-24 h-[2px] bg-[var(--color-fourth)] rounded-full" />
+            <div className="w-24 h-[2px] bg-fourth rounded-full" />
 
             <div className="flex flex-col sm:flex-row gap-4 pt-3">
-              <a href="/vehicles" className="relative group inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-[#044596] to-[#007bff] shadow-lg shadow-blue-900/40 transition duration-300 hover:shadow-blue-600/40 hover:-translate-y-[1px]">
+              <a href="/vehicles" className="relative group inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-sm font-semibold text-primary bg-gradient-to-r from-[#044596] to-[#007bff] shadow-lg shadow-blue-900/40 transition duration-300 hover:shadow-blue-600/40 hover:-translate-y-[1px]">
                 Browse Vehicles
               </a>
 
-              <a href="/consultant" className="px-7 py-3.5 rounded-xl text-sm font-semibold border border-[#374151] border-2 text-[#e5e7eb] bg-[#111318] transition duration-300 hover:border-[var(--color-fourth)] hover:text-[var(--color-fourth)] hover:bg-[#151922] hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.25)]">
+              <a href="/consultant" className="px-7 py-3.5 rounded-xl text-sm font-semibold border border-[#374151] border-2 text-[#e5e7eb] bg-[#111318] transition duration-300 hover:border-fourth hover:text-fourth hover:bg-[#151922] hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.25)]">
                 Become a Consultant
               </a>
             </div>
@@ -107,19 +107,19 @@ export default function HeroSection() {
               {/* Animated metrics */}
               <div className="grid grid-cols-3 text-center gap-4 mt-4">
                 <div>
-                  <p className="text-lg font-bold text-[var(--color-fourth)]">
+                  <p className="text-lg font-bold text-fourth">
                     <CountUp end={100} suffix="+" />
                   </p>
                   <p className="text-[11px] text-[#9ca3af] uppercase">Consultants</p>
                 </div>
                 <div>
-                  <p className="text-lg font-bold text-[var(--color-fourth)]">
+                  <p className="text-lg font-bold text-fourth">
                     <CountUp end={500} suffix="+" />
                   </p>
                   <p className="text-[11px] text-[#9ca3af] uppercase">Listings</p>
                 </div>
                 <div>
-                  <p className="text-lg font-bold text-[var(--color-fourth)]">
+                  <p className="text-lg font-bold text-fourth">
                     <CountUp end={98} suffix="%" />
                   </p>
                   <p className="text-[11px] text-[#9ca3af] uppercase">Visibility</p>
@@ -152,7 +152,7 @@ export default function HeroSection() {
                   { v: "95%", l: "Transparency" },
                 ].map((item, i) => (
                   <div key={i} className="bg-[#0f1117] rounded-lg p-3 border border-[#1f2937] text-center hover:border-[#60a5fa]/40 transition">
-                    <p className="text-lg font-bold text-[var(--color-fourth)]">{item.v}</p>
+                    <p className="text-lg font-bold text-fourth">{item.v}</p>
                     <p className="text-[10px] text-[#9ca3af] uppercase tracking-wide">{item.l}</p>
                   </div>
                 ))}

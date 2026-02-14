@@ -11,11 +11,11 @@ export default function Cta() {
             text-3xl sm:text-4xl xl:text-5xl
             font-semibold
             leading-[1.12]
-            text-white
+            text-primary
             font-[Montserrat]
           ">
             Ready to explore better
-            <span className="block mt-3 text-[var(--color-fourth)]">
+            <span className="block mt-3 text-fourth">
               used vehicles?
             </span>
           </h2>
@@ -27,7 +27,7 @@ export default function Cta() {
           flex flex-col md:flex-row
           rounded-3xl
           overflow-hidden
-          border border-white/10
+          border border-primary/10
         ">
 
           {/* ================= BUYERS ================= */}
@@ -41,7 +41,7 @@ export default function Cta() {
               hover:flex-[1.3]
               px-10 py-16 lg:py-20
               text-center
-              border-b md:border-b-0 md:border-r border-white/80
+              border-b md:border-b-0 md:border-r border-primary/80
             "
           >
 
@@ -52,7 +52,7 @@ export default function Cta() {
                 text-natural-400
                 px-4 py-1.5
                 rounded-full
-                border border-white/30
+                border border-primary/30
                 text-xs tracking-[0.35em] uppercase font-semibold
               ">
                 For Buyers
@@ -63,7 +63,7 @@ export default function Cta() {
             <p className="
               text-2xl sm:text-3xl
               font-semibold
-              text-[var(--color-fourth)]
+              text-fourth
               font-[Montserrat]
             ">
               Browse Vehicles
@@ -73,7 +73,7 @@ export default function Cta() {
             <p className="
               mt-4
               text-base
-              text-white/90
+              text-primary/90
               max-w-sm
               mx-auto
               leading-relaxed
@@ -84,10 +84,10 @@ export default function Cta() {
             {/* LINK */}
             <span className="
               mt-10 inline-block
-              text-white
+              text-primary
               underline underline-offset-8
-              decoration-white/40
-              group-hover:decoration-[var(--color-fourth)]
+              decoration-primary/40
+              group-hover:decoration-fourth
               transition
             ">
               Enter Marketplace →
@@ -116,7 +116,7 @@ export default function Cta() {
                text-natural-400
                 px-4 py-1.5
                 rounded-full
-                border border-white/30
+                border border-primary/30
                 text-xs tracking-[0.35em] uppercase font-semibold
               ">
                 For Consultants
@@ -127,7 +127,7 @@ export default function Cta() {
             <p className="
               text-2xl sm:text-3xl
               font-semibold
-              text-[var(--color-fourth)]
+              text-fourth
               font-[Montserrat]
             ">
               Become a Consultant
@@ -137,7 +137,7 @@ export default function Cta() {
             <p className="
               mt-4
               text-base
-              text-white/90
+              text-primary/90
               max-w-sm
               mx-auto
               leading-relaxed
@@ -148,10 +148,10 @@ export default function Cta() {
             {/* LINK */}
             <span className="
               mt-10 inline-block
-              text-white
+              text-primary
               underline underline-offset-8
-              decoration-white/40
-              group-hover:decoration-[var(--color-fourth)]
+              decoration-primary/40
+              group-hover:decoration-fourth
               transition
             ">
               Start Your Storefront →

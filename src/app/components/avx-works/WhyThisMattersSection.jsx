@@ -53,25 +53,25 @@ export default function WhyThisMattersSection() {
               Why This Matters
             </p>
 
-            <h2 className="text-3xl md:text-[46px] font-bold leading-[1.15] text-white">
+            <h2 className="text-3xl md:text-[46px] font-bold leading-[1.15] text-primary">
               Confidence Comes
-              <span className="block  text-[var(--color-fourth)]">
+              <span className="block  text-fourth">
                 From Clarity
               </span>
             </h2>
 
-            <p className="text-[17px] text-white/85 leading-relaxed">
+            <p className="text-[17px] text-primary/85 leading-relaxed">
               Buying a pre-owned vehicle is a significant financial decision.
               AVX exists to reduce ambiguity — by making seller identity
               visible, vehicle information structured, and inspection optional
               but accessible.
             </p>
 
-            <div className="pt-6 border-t border-white/10">
-              <p className="text-lg font-semibold text-white">
+            <div className="pt-6 border-t border-primary/10">
+              <p className="text-lg font-semibold text-primary">
                 Trust is not claimed.
               </p>
-              <p className="text-lg font-semibold text-[var(--color-fourth)]">
+              <p className="text-lg font-semibold text-fourth">
                 It is built into the system.
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function WhyThisMattersSection() {
                 className="
         group cursor-pointer relative overflow-hidden
         p-6 rounded-2xl border backdrop-blur-xl
-        border-white/10
+        border-primary/10
         bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)]
         transition
         hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]
@@ -104,11 +104,11 @@ export default function WhyThisMattersSection() {
       "
                 />
 
-                <p className="relative text-[var(--color-fourth)] text-sm font-medium mb-2">
+                <p className="relative text-fourth text-sm font-medium mb-2">
                   {card.title}
                 </p>
 
-                <p className="relative text-white text-sm">{card.desc}</p>
+                <p className="relative text-primary text-sm">{card.desc}</p>
 
                 {/* HOVER EXPAND TEXT — CSS CONTROLLED */}
                 <div

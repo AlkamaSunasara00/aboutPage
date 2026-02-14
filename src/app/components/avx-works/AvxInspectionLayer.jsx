@@ -64,7 +64,7 @@ export default function AvxInspectionLayer() {
 
                     <h2 className="mt-6 text-5xl xl:text-6xl font-medium leading-tight">
                         Independent inspection,
-                        <span className="block text-blue-500">
+                        <span className="block text-fourth">
                             visible before decisions
                         </span>
                     </h2>
@@ -111,7 +111,7 @@ export default function AvxInspectionLayer() {
                                     <p className="text-xs tracking-widest uppercase text-neutral-500">
                                         Inspection Core
                                     </p>
-                                    <p className="mt-3 text-xl font-semibold text-[var(--color-fourth)]">
+                                    <p className="mt-3 text-xl font-semibol text-fourth">
                                         AVX Verification
                                     </p>
                                 </div>
@@ -161,7 +161,7 @@ export default function AvxInspectionLayer() {
                                 Inspection focus
                             </p>
 
-                            <h3 className="text-2xl font-semibold text-[var(--color-fourth)] mb-4">
+                            <h3 className="text-2xl font-semibold text-fourth mb-4">
                                 {active.title}
                             </h3>
 
@@ -181,8 +181,8 @@ export default function AvxInspectionLayer() {
                                     </>
                                 ) : (
                                     <>
-                                        <CheckCircle size={18} className="text-blue-500" />
-                                        <span className="text-sm text-blue-500">
+                                        <CheckCircle size={18} className="text-fourth" />
+                                        <span className="text-sm text-fourth">
                                             Inspection summary visible on listing
                                         </span>
                                     </>
@@ -202,7 +202,7 @@ export default function AvxInspectionLayer() {
 function KeyPoint({ title, desc }) {
     return (
         <div>
-            <h4 className="text-lg font-semibold text-white mb-2">
+            <h4 className="text-lg font-semibold text-primary mb-2">
                 {title}
             </h4>
             <p className="text-neutral-400 leading-relaxed">
@@ -222,7 +222,7 @@ function SignalPoint({ index, title, desc }) {
         bg-gradient-to-b from-[#101010] to-[#090909]
         p-8
         transition-all duration-300 ease-out
-        hover:border-[var(--color-fourth)]
+        hover:border-fourth
       "
     >
       {/* GHOST INDEX */}
@@ -235,7 +235,7 @@ function SignalPoint({ index, title, desc }) {
           tracking-tight
           text-neutral-800/40
           transition-colors duration-300
-          group-hover:text-[var(--color-fourth)]/20
+          group-hover:text-fourth/20
         "
       >
         {index}
@@ -245,9 +245,9 @@ function SignalPoint({ index, title, desc }) {
       <h4
         className="
           relative z-10
-          text-xl font-semibold text-white mb-3
+          text-xl font-semibold text-primary mb-3
           transition-colors duration-300
-          group-hover:text-[var(--color-fourth)]
+          group-hover:text-fourth
         "
       >
         {title}
