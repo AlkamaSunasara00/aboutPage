@@ -86,7 +86,7 @@ export default function AVXJourneySection() {
                   backdrop-blur-xl
                   p-6
                   bg-[linear-gradient(90deg,#313131_0%,#1a1919_45%,#000000_100%)]
-                  hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.25)]
+                  hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]
                   hover:border-blue-400/40
                   transition
                 ">
