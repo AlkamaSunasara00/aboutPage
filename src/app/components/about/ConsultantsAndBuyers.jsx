@@ -125,7 +125,7 @@ export default function ConsultantsAndBuyers() {
   }, [active]);
 
   return (
-    <section className="bg-[var(--color-secondary)] ">
+    <section className="bg-secondary">
       <div className="mx-auto max-w-7xl px-6 py-10">
 
         {/* ===================== */}
@@ -146,7 +146,7 @@ export default function ConsultantsAndBuyers() {
               className={`relative z-10 px-8 py-3 text-sm uppercase tracking-widest transition
                 ${active === "buyers"
                   ? "text-black"
-                  : "text-neutral-300 hover:text-primary"}`}
+                  : "text-third hover:text-primary"}`}
             >
               For Buyers
             </button>
@@ -157,7 +157,7 @@ export default function ConsultantsAndBuyers() {
               className={`relative z-10 px-10 py-3 text-sm uppercase tracking-widest transition
                 ${active === "consultants"
                   ? "text-black"
-                  : "text-neutral-300 hover:text-primary"}`}
+                  : "text-third hover:text-primary"}`}
             >
               For Consultants
             </button>
@@ -205,7 +205,7 @@ function StickyBlock({ label, titleTop, titleBottom, desc, cta }) {
         </span>
       </h2>
 
-      <p className="mt-12 max-w-xl text-xl leading-relaxed text-neutral-300 ">
+      <p className="mt-12 max-w-xl text-xl leading-relaxed text-third">
         {desc}
       </p>
 
@@ -232,7 +232,7 @@ function Capability({ title, desc, icon }) {
         <h3 className="text-2xl font-medium text-primary">
           {title}
         </h3>
-        <p className="mt-4 text-lg leading-relaxed text-neutral-400">
+        <p className="mt-4 text-lg leading-relaxed text-third">
           {desc}
         </p>
       </div>
