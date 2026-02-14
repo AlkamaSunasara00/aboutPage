@@ -89,7 +89,7 @@ export default function VehiclesListed() {
       bg-[#0c0f14]
 
       /* ✨ gradient border feel */
-      border-2 border-white/25
+      border-2 border-primary/25
 
       /* ✨ base shadow */
 
@@ -177,12 +177,12 @@ export default function VehiclesListed() {
             text-white/90
             text-[13px]
             font-medium
-            border border-white/20
+            border border-primary/20
 
             transition-all duration-300
 
-            hover:text-white
-            hover:border-white/35
+            hover:text-primary
+            hover:border-primary/35
             hover:shadow-[0_6px_20px_rgba(0,0,0,0.5)]
           "
                     >

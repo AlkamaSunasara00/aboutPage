@@ -202,7 +202,7 @@ export default function AvxInspectionLayer() {
 function KeyPoint({ title, desc }) {
     return (
         <div>
-            <h4 className="text-lg font-semibold text-white mb-2">
+            <h4 className="text-lg font-semibold text-primary mb-2">
                 {title}
             </h4>
             <p className="text-third leading-relaxed">
@@ -222,7 +222,7 @@ function SignalPoint({ index, title, desc }) {
         bg-gradient-to-b from-[#101010] to-[#090909]
         p-8
         transition-all duration-300 ease-out
-        hover:border-[var(--color-fourth)]
+        hover:border-fourth
       "
         >
             {/* GHOST INDEX */}
@@ -245,7 +245,7 @@ function SignalPoint({ index, title, desc }) {
             <h4
                 className="
           relative z-10
-          text-xl font-semibold text-white mb-3
+          text-xl font-semibold text-primary mb-3
           transition-colors duration-300
           group-hover:text-fourth
         "
