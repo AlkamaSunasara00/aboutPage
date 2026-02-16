@@ -9,11 +9,7 @@ export default function InteractionSection() {
   return (
     <section className="relative bg-secondary py-20 overflow-hidden">
 
-      {/* RECORDING STATUS */}
-      <div className="absolute top-10 right-14 flex items-center gap-2 text-xs font-mono text-red-500">
-        <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse" />
-        RECORDING ENABLED
-      </div>
+     
 
       <div className="relative max-w-6xl mx-auto px-6">
 
