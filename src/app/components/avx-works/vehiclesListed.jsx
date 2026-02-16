@@ -93,10 +93,10 @@ export default function VehiclesListed() {
                   <div className="absolute inset-0 border-2 border-dashed border-fourth/20 rounded-full animate-[spin_20s_linear_infinity]" />
 
                   {/* Middle Glass Ring */}
-                  <div className="absolute inset-4 border border-white/10 rounded-full bg-white/[0.02] backdrop-blur-sm shadow-[inset_0_0_40px_rgba(255,255,255,0.05)]" />
+                  <div className="absolute inset-4 border border-primary/10 rounded-full bg-primary/[0.02] backdrop-blur-sm shadow-[inset_0_0_40px_rgba(255,255,255,0.05)]" />
 
                   {/* Main Hexagonal / Circular Core */}
-                  <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#080808] border-[1px] border-white/20 shadow-2xl flex flex-col items-center justify-center overflow-hidden">
+                  <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#080808] border-[1px] border-primary/20 shadow-2xl flex flex-col items-center justify-center overflow-hidden">
 
                     {/* Animated Scan Line across the Badge */}
                     <motion.div
@@ -114,7 +114,7 @@ export default function VehiclesListed() {
                     {/* Center Icon & Title */}
                     <div className="flex flex-col items-center z-20">
                       <div className="relative mb-3">
-                        <ShieldCheck size={64} className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+                        <ShieldCheck size={64} className="text-primary drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
                         <motion.div
                          
                           className="absolute -top-1 -right-1"
@@ -122,33 +122,33 @@ export default function VehiclesListed() {
                           <Verified size={24} className="text-fourth" />
                         </motion.div>
                       </div>
-                      <h3 className="text-4xl font-primary font-black text-white tracking-tighter mb-1">AVX<span className="text-fourth">.</span></h3>
-                      <p className="text-[11px] font-bold text-white/40 uppercase tracking-[0.2em]">Verified Asset</p>
+                      <h3 className="text-4xl font-primary font-black text-primary tracking-tighter mb-1">AVX<span className="text-fourth">.</span></h3>
+                      <p className="text-[11px] font-bold text-primary/40 uppercase tracking-[0.2em]">Verified Asset</p>
                     </div>
 
                     {/* Bottom Metadata */}
                     <div className="absolute bottom-10 flex items-center gap-6">
                       <div className="text-center">
-                        <p className="text-[12px] text-white/30 uppercase font-bold mb-0.5">Confidence</p>
-                        <p className="text-[15px] text-white/90 font-mono">100%</p>
+                        <p className="text-[12px] text-primary/30 uppercase font-bold mb-0.5">Confidence</p>
+                        <p className="text-[15px] text-primary/90 font-mono">100%</p>
                       </div>
-                      <div className="w-[1px] h-6 bg-white/10" />
+                      <div className="w-[1px] h-6 bg-primary/10" />
                       <div className="text-center">
-                        <p className="text-[12px] text-white/30 uppercase font-bold mb-0.5">Precision</p>
-                        <p className="text-[15px] text-white/90 font-mono">A++</p>
+                        <p className="text-[12px] text-primary/30 uppercase font-bold mb-0.5">Precision</p>
+                        <p className="text-[15px] text-primary/90 font-mono">A++</p>
                       </div>
                     </div>
 
                     {/* Background "Verified" Text Watermark */}
-                    <span className="absolute text-[80px] font-black text-white/[0.02] -bottom-4 pointer-events-none select-none">TRUST</span>
+                    <span className="absolute text-[80px] font-black text-primary/[0.02] -bottom-4 pointer-events-none select-none">TRUST</span>
                   </div>
 
                   {/* Outer Floating Accents */}
-                  <div className="absolute -top-4 -right-4 bg-black border border-white/10 px-4 py-2 rounded-2xl shadow-xl">
+                  <div className="absolute -top-4 -right-4 bg-black border border-primary/10 px-4 py-2 rounded-2xl shadow-xl">
                     <p className="text-[9px] font-mono text-fourth">ISO:9001 COMPLIANT</p>
                   </div>
-                  <div className="absolute -bottom-2 -left-4 bg-black border border-white/10 px-4 py-2 rounded-2xl shadow-xl">
-                    <p className="text-[9px] font-mono text-white/60 uppercase tracking-widest">Protocol 2.0</p>
+                  <div className="absolute -bottom-2 -left-4 bg-black border border-primary/10 px-4 py-2 rounded-2xl shadow-xl">
+                    <p className="text-[9px] font-mono text-primary/60 uppercase tracking-widest">Protocol 2.0</p>
                   </div>
                 </div>
               </div>
