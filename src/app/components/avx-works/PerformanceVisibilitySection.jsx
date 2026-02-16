@@ -46,7 +46,6 @@ export default function PerformanceVisibilitySection() {
               ))}
             </div>
 
-            {/* NEW TRUST LINE */}
             <div className="pt-4 border-t border-primary/10">
               <p className="text-sm text-third leading-relaxed">
                 Transparency ensures buyers understand both the vehicle
