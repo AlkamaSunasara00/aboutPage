@@ -46,7 +46,7 @@ export default function WhyThisMattersSection() {
       />
 
       <div className="relative max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center h-[fit-content]">
           {/* LEFT //// */}
           <div className="space-y-8 max-w-xl">
             <p className="text-sm tracking-[0.4em] uppercase text-third font-semibold">
