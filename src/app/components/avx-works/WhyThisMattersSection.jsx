@@ -30,8 +30,8 @@ export default function WhyThisMattersSection() {
       <div
         className="
         absolute left-0 right-0 top-1/2
-        h-[2px]
-        bg-gradient-to-r from-transparent via-blue-500/40 to-transparent
+        h-0.5
+        bg-linear-to-r from-transparent via-blue-500/40 to-transparent
         blur-sm
       "
       />
@@ -39,14 +39,14 @@ export default function WhyThisMattersSection() {
       {/* AMBIENT LIGHT */}
       <div
         className="
-        absolute right-[-200px] top-[-200px]
-        w-[600px] h-[600px]
+        absolute -right-50 -top-50
+        w-150 h-150
         bg-blue-500/10 blur-[180px] rounded-full
       "
       />
 
       <div className="relative max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center h-fit">
           {/* LEFT //// */}
           <div className="space-y-8 max-w-xl">
             <p className="text-sm tracking-[0.4em] uppercase text-third font-semibold">
@@ -98,9 +98,9 @@ export default function WhyThisMattersSection() {
                 <div
                   className="
         absolute inset-0 opacity-0 group-hover:opacity-100 transition
-        bg-gradient-to-r from-transparent via-blue-400/20 to-transparent
-        translate-x-[-100%] group-hover:translate-x-[100%]
-        duration-[900ms]
+        bg-linear-to-r from-transparent via-blue-400/20 to-transparent
+        -translate-x-full group-hover:translate-x-full
+        duration-900
       "
                 />
 
@@ -114,10 +114,10 @@ export default function WhyThisMattersSection() {
                 <div
                   className="
     max-h-0 opacity-0
-    group-hover:max-h-[180px]
+    group-hover:max-h-45
     group-hover:opacity-100
-    transition-all duration-[650ms]
-    ease-[cubic-bezier(0.22,1,0.36,1)]
+    transition-all duration-650
+   ease-[cubic-bezier(0.22,1,0.36,1)]
     overflow-hidden
   "
                 >
