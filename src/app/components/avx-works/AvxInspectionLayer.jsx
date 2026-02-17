@@ -205,7 +205,6 @@ function SignalPoint({ index, title, desc }) {
             className="
         group relative overflow-hidden
         rounded-2xl
-        bg-linear-to-b from-[#101010] to-[#090909]
         p-8
         transition-all duration-300 ease-out
         border-2 border-third/10  hover:border-third/5 hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]    "
@@ -218,7 +217,7 @@ function SignalPoint({ index, title, desc }) {
           text-[72px]
           font-semibold
           tracking-tight
-          text-neutral-800/40
+          text-neutral-100/30
           transition-colors duration-300
           group-hover:text-fourth/20
         "
