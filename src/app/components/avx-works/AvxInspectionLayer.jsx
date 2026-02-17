@@ -53,9 +53,8 @@ export default function AvxInspectionLayer() {
     const [active, setActive] = useState(ITEMS[0]);
 
     return (
-        <section className="bg-secondary border-t border-neutral-800">
-            <div className="mx-auto max-w-7xl px-6 py-22">
-
+        <section className="bg-secondary">
+            <div className="mx-auto max-w-7xl px-6 pb-10">
                 {/* HEADER */}
                 <div className="max-w-4xl mb-14">
                     <p className="text-sm tracking-[0.4em] uppercase text-third font-semibold">
@@ -64,9 +63,7 @@ export default function AvxInspectionLayer() {
 
                     <h2 className="mt-6 text-5xl xl:text-6xl font-medium leading-tight">
                         Independent inspection,
-                        <span className="block text-fourth">
-                            visible before decisions
-                        </span>
+                        <span className="block text-fourth">visible before decisions</span>
                     </h2>
 
                     <p className="mt-6 text-xl leading-relaxed text-third">
@@ -76,7 +73,7 @@ export default function AvxInspectionLayer() {
                 </div>
 
                 {/* KEY PRINCIPLES — THIS WAS MISSING */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-28">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
                     <SignalPoint
                         index="01"
                         title="Independent by design"
@@ -94,27 +91,22 @@ export default function AvxInspectionLayer() {
                     />
                 </div>
 
-
                 {/* SYSTEM */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
-
                     {/* RADIAL SYSTEM */}
                     <div className="lg:col-span-6 flex justify-center">
-                        <div className="relative h-[420px] w-[420px]">
-
+                        <div className="relative h-105 w-105">
                             {/* CORE */}
-                            <div className="absolute inset-24 rounded-full
-                bg-[#0d0d0d]
-                border border-neutral-700
-                flex items-center justify-center text-center px-6">
-                                <div>
-                                    <p className="text-xs tracking-widest uppercase text-third">
-                                        Inspection Core
-                                    </p>
-                                    <p className="mt-3 text-xl font-semibold text-fourth">
-                                        AVX Verification
-                                    </p>
-                                </div>
+                            <div className="absolute inset-24 rounded-full overflow-hidden border border-neutral-700">
+                                {/* IMAGE */}
+                                <img
+                                    src="/car-inspection.avif"
+                                    alt="Inspection Core"
+                                    className="w-full h-full object-cover scale-105"
+                                />
+
+                                {/* DARK OVERLAY */}
+                                <div className="absolute inset-0 bg-black/20" />
                             </div>
 
                             {/* NODES */}
@@ -153,10 +145,11 @@ export default function AvxInspectionLayer() {
 
                     {/* CONTEXT PANEL */}
                     <div className="lg:col-span-6">
-                        <div className="rounded-3xl border border-neutral-800
-              bg-gradient-to-b from-[#101010] to-[#090909]
-              p-10 flex flex-col">
-
+                        <div
+                            className="rounded-3xl border border-neutral-800
+              bg-linear-to-b from-[#101010] to-[#090909]
+              p-10 flex flex-col"
+                        >
                             <p className="text-xs tracking-widest uppercase text-neutral-500 mb-2">
                                 Inspection focus
                             </p>
@@ -188,10 +181,8 @@ export default function AvxInspectionLayer() {
                                     </>
                                 )}
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -202,12 +193,8 @@ export default function AvxInspectionLayer() {
 function KeyPoint({ title, desc }) {
     return (
         <div>
-            <h4 className="text-lg font-semibold text-primary mb-2">
-                {title}
-            </h4>
-            <p className="text-third leading-relaxed">
-                {desc}
-            </p>
+            <h4 className="text-lg font-semibold text-primary mb-2">{title}</h4>
+            <p className="text-third leading-relaxed">{desc}</p>
         </div>
     );
 }
@@ -218,11 +205,10 @@ function SignalPoint({ index, title, desc }) {
             className="
         group relative overflow-hidden
         rounded-2xl
-        border border-neutral-800
-        bg-gradient-to-b from-[#101010] to-[#090909]
+        bg-linear-to-b from-[#101010] to-[#090909]
         p-8
         transition-all duration-300 ease-out
-        hover:border-fourth
+        border-2 border-third/10  hover:border-third/5 hover:shadow-[0_10px_40px_-10px_rgba(230,230,230,0.15)]
       "
         >
             {/* GHOST INDEX */}
