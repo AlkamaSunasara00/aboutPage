@@ -7,11 +7,11 @@ import {
 
 export default function AvxStructure() {
   return (
-    <section className="relative bg-secondary overflow-hidden">
+    <section className="relative  overflow-hidden">
       <div className="mx-auto max-w-6xl px-6">
 
         {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-15">
+        <div className="text-center max-w-3xl mx-auto mb-15 mt-[30]">
           <p className="text-sm tracking-[0.4em] uppercase text-third font-semibold">
             The AVX Structure
           </p>
