@@ -1,38 +1,37 @@
-export default function Cta() {
+export default function ConsultCta() {
   return (
-    <section className="hero_car_half2 bg-secondary">
-
+    <section className="hero_car_half2 py-15">
       <div className="mx-auto max-w-7xl px-6 pb-10">
-
         {/* Heading */}
         <div className="text-center">
-          <h2 className="
+          <h2
+            className="
             mx-auto max-w-3xl
             text-3xl sm:text-4xl xl:text-5xl
             font-semibold
             leading-[1.12]
             text-primary
-            font-primary
-          ">
-            Ready to explore better
-            <span className="block mt-3 text-fourth">
-              used vehicles?
-            </span>
+            font-[Montserrat]
+          "
+          >
+            Ready to build your presence
+            <span className="block mt-3 text-fourth">on AVX?</span>
           </h2>
         </div>
 
         {/* FLEX SPLIT CTA */}
-        <div className="
+        <div
+          className="
           mt-12
           flex flex-col md:flex-row
           rounded-3xl
           overflow-hidden
           border border-primary/10
-        ">
-
-          {/* ================= BUYERS ================= */}
+        "
+        >
+          {/* ================= BECOME CONSULTANT ================= */}
           <a
-            href="/vehicles"
+            href="/consultant/register"
             className="
               group
               flex-1
@@ -44,60 +43,71 @@ export default function Cta() {
               border-b md:border-b-0 md:border-r border-primary/80
             "
           >
-
             {/* TAG */}
             <p className="mb-6">
-              <span className="
+              <span
+                className="
                 bg-secondary/25
                 text-natural-400
                 px-4 py-1.5
                 rounded-full
                 border border-primary/30
                 text-xs tracking-[0.35em] uppercase font-semibold
-              ">
-                For Buyers
+              "
+              >
+                Get Started
               </span>
             </p>
 
             {/* TITLE */}
-            <p className="
+            <p
+              className="
               text-2xl sm:text-3xl
               font-semibold
               text-fourth
-              font-primary
-            ">
-              Browse Vehicles
+              font-[Montserrat]
+            "
+            >
+              Become a Consultant
             </p>
 
             {/* BODY TEXT */}
-            <p className="
+            <p
+              className="
               mt-4
               text-base
               text-primary/90
               max-w-sm
               mx-auto
               leading-relaxed
-            ">
-              Discover verified vehicles through structured, transparent listings.
+            "
+            >
+              Join AVX to build visibility, gain trust, and grow your automotive
+              business.
             </p>
 
-            {/* LINK */}
-            <span className="
-              mt-10 inline-block
-              text-primary
+            {/* BUTTON */}
+            <div className="mt-10">
+              <span
+                className="
+                inline-flex items-center justify-center
+                px-6 py-3
+                rounded-xl
+                 text-primary
               underline underline-offset-8
               decoration-primary/40
               group-hover:decoration-fourth
               transition
-            ">
-              Enter Marketplace →
-            </span>
-
+              "
+              >
+                Become a Consultant →
+              </span>
+            </div>
           </a>
 
-          {/* ================= CONSULTANTS ================= */}
+          {/* ================= VIEW PRICING ================= */}
           <a
-            href="/consultant"
+            href="/pricing"
             className="
               group
               flex-1
@@ -108,61 +118,69 @@ export default function Cta() {
               text-center
             "
           >
-
             {/* TAG */}
             <p className="mb-6">
-              <span className="
+              <span
+                className="
                 bg-secondary/25
-               text-natural-400
+                text-natural-400
                 px-4 py-1.5
                 rounded-full
                 border border-primary/30
                 text-xs tracking-[0.35em] uppercase font-semibold
-              ">
-                For Consultants
+              "
+              >
+                Plans & Pricing
               </span>
             </p>
 
             {/* TITLE */}
-            <p className="
+            <p
+              className="
               text-2xl sm:text-3xl
               font-semibold
               text-fourth
-              font-primary
-            ">
-              Become a Consultant
+              font-[Montserrat]
+            "
+            >
+              View Pricing
             </p>
 
             {/* BODY TEXT */}
-            <p className="
+            <p
+              className="
               mt-4
               text-base
               text-primary/90
               max-w-sm
               mx-auto
               leading-relaxed
-            ">
-              Build visibility and credibility on a structured, performance-led platform.
+            "
+            >
+              Explore flexible subscription tiers designed for consultants at
+              every growth stage.
             </p>
 
-            {/* LINK */}
-            <span className="
-              mt-10 inline-block
-              text-primary
+            {/* BUTTON */}
+            <div className="mt-10">
+              <span
+                className="
+                inline-flex items-center justify-center
+                px-6 py-3
+                rounded-xl
+                text-primary
               underline underline-offset-8
               decoration-primary/40
               group-hover:decoration-fourth
               transition
-            ">
-              Start Your Storefront →
-            </span>
-
+              "
+              >
+                View Pricing →
+              </span>
+            </div>
           </a>
-
         </div>
-
       </div>
-
     </section>
   );
 }
