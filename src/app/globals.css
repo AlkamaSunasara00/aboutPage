@@ -6,6 +6,7 @@
       --color-secondary: #121212;
       --color-third: #bebebe;
       --color-fourth: #007bff;
+      --color-warning: #CA0B00;
       --font-primary: "Montserrat", sans-serif;
       --font-secondary: "Poppins", sans-serif;
       --hover-border: linear-gradient(90deg,
@@ -21,6 +22,7 @@
       --color-third: #bebebe;
       --breakpoint-3xl: 120rem;
       --color-fourth: #007bff;
+       --color-warning: #CA0B00;
       --primary: "Montserrat", sans-serif;
       --secondary: "Poppins", sans-serif;
 
