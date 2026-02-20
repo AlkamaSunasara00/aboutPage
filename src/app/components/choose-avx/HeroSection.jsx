@@ -31,7 +31,7 @@ export default function ProfessionalHero() {
                             </span>
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl font-bold text-primary leading-tight tracking-tight uppercase font-primary">
+                        <h1 className="font-primary text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight tracking-tight uppercase font-primary">
                             A Structured Marketplace <br />
                             For Serious <span className="text-fourth">Vehicle Buyers</span>
                         </h1>

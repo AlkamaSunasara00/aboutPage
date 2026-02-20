@@ -35,7 +35,7 @@ export default function ConsultantAccountability() {
               </p>
             </div>
             
-            <h2 className="text-5xl lg:text-6xl font-bold uppercase tracking-tighter leading-[0.9] mb-8 text-primary">
+            <h2 className="font-primary text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tighter leading-[0.9] mb-8 text-primary">
               Storefront <br />
               <span className="text-third/30 italic font-light">Transparency.</span>
             </h2>

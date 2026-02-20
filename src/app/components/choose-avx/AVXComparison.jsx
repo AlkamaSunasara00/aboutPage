@@ -58,10 +58,10 @@ export default function AVXComparison() {
     <section className="relative py-10 px-6 overflow-hidden text-primary font-secondary">
 
       {/* Decorative grid background */}
-     
+
 
       {/* Glow blob */}
-     
+
 
       <div className="max-w-7xl mx-auto relative">
 
@@ -70,7 +70,7 @@ export default function AVXComparison() {
           <p className="text-sm tracking-[0.4em] uppercase text-third font-semibold mb-3">
             Platform Comparison
           </p>
-          <h2 className="font-primary text-5xl font-extrabold uppercase leading-none tracking-tight mb-4">
+          <h2 className="font-primary text-3xl sm:text-4xl lg:text-5xl  font-extrabold uppercase leading-none tracking-tight mb-4">
             Why{" "}
             <span
               className="text-fourth pb-0.5"
@@ -89,7 +89,7 @@ export default function AVXComparison() {
         <div className="border border-white/8 rounded-[20px] overflow-hidden">
 
           {/* Column Headers */}
-          <div className="grid grid-cols-3 border-b border-white/8">
+          <div className="hidden md:grid md:grid-cols-3 border-b border-white/8">
 
             {/* Feature label col */}
             <div className="px-7 py-5 text-[12px] tracking-[0.3em] uppercase text-third/50 font-semibold">
@@ -122,58 +122,54 @@ export default function AVXComparison() {
                 key={i}
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
-                className={`grid grid-cols-3 transition-colors duration-200 cursor-default ${
-                  !isLast ? "border-b border-white/5" : ""
-                } ${isHovered ? "bg-white/2" : "bg-transparent"}`}
+                className={`grid grid-cols-1 md:grid-cols-3 transition-colors duration-200 cursor-default ${!isLast ? "border-b border-white/5" : ""
+                  } ${isHovered ? "bg-white/2" : "bg-transparent"}`}
               >
                 {/* Label cell */}
-                <div className="px-7 py-5.5 flex items-center">
+                <div className="px-6 md:px-7 py-4 md:py-5.5 flex items-center">
                   <span
-                    className={`text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors duration-200 ${
-                      isHovered ? "text-primary" : "text-third/55"
-                    }`}
+                    className={`text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors duration-200 ${isHovered ? "text-primary" : "text-third/55"
+                      }`}
                   >
                     {row.label}
                   </span>
                 </div>
 
                 {/* Generic cell */}
-                <div
-                  className={`px-7 py-5.5 border-l border-r border-white/5 flex items-center gap-2.5 transition-colors duration-200 ${
-                    isHovered ? "bg-white/1.5" : "bg-white/1"
-                  }`}
+                <div className={`px-6 md:px-7 py-4 md:py-5.5 
+  md:border-l md:border-r border-white/5 
+  flex items-center gap-2.5 
+  ${isHovered ? "bg-white/1.5" : "bg-white/1"}
+`}
                 >
                   <span className="text-third/30 shrink-0">{row.generic.icon}</span>
                   <span
-                    className={`text-[14.5px] text-third/55 leading-snug transition-all duration-200 ${
-                      isHovered ? "line-through decoration-third/25" : ""
-                    }`}
+                    className={`text-[14.5px] text-third/55 leading-snug transition-all duration-200 ${isHovered ? "line-through decoration-third/25" : ""
+                      }`}
                   >
                     {row.generic.text}
                   </span>
                 </div>
 
                 {/* AVX cell */}
-                <div
-                  className={`px-7 py-5.5 flex items-center gap-2.5 relative transition-colors duration-200 ${
-                    isHovered ? "bg-fourth/10" : "bg-fourth/4"
-                  }`}
+                <div className={`px-6 md:px-7 py-4 md:py-5.5 
+  flex items-center gap-2.5 relative 
+  ${isHovered ? "bg-fourth/10" : "bg-fourth/4"}
+`}
                 >
                   {/* Active left border indicator */}
                   {isHovered && (
                     <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-fourth rounded-r-sm" />
                   )}
                   <span
-                    className={`shrink-0 transition-colors duration-200 ${
-                      isHovered ? "text-fourth" : "text-fourth/60"
-                    }`}
+                    className={`shrink-0 transition-colors duration-200 ${isHovered ? "text-fourth" : "text-fourth/60"
+                      }`}
                   >
                     {row.avx.icon}
                   </span>
                   <span
-                    className={`text-[14.5px] leading-snug transition-all duration-200 ${
-                      isHovered ? "text-primary font-semibold" : "text-primary/75 font-normal"
-                    }`}
+                    className={`text-[14.5px] leading-snug transition-all duration-200 ${isHovered ? "text-primary font-semibold" : "text-primary/75 font-normal"
+                      }`}
                   >
                     {row.avx.text}
                   </span>
@@ -188,9 +184,8 @@ export default function AVXComparison() {
           {stats.map((item, i) => (
             <div
               key={i}
-              className={`px-5 py-6 bg-black/30 text-center ${
-                i < stats.length - 1 ? "border-r border-white/5" : ""
-              }`}
+              className={`px-5 py-6 bg-black/30 text-center ${i < stats.length - 1 ? "border-r border-white/5" : ""
+                }`}
             >
               <div className="font-primary text-2xl md:text-3xl font-extrabold text-fourth tracking-tight leading-none mb-1.5">
                 {item.stat}

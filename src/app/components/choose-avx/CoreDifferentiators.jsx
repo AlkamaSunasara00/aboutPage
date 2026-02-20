@@ -45,7 +45,7 @@ export default function CoreDifferentiatorsMatrix() {
             CORE DIFFERENTIATORS
           </p>
 
-          <h2 className="text-5xl font-bold uppercase font-primary tracking-tight">
+          <h2 className=" font-primary text-3xl sm:text-4xl lg:text-5xl font-bold uppercase font-primary tracking-tight">
             Platform <span className="text-fourth">Infrastructure</span>
           </h2>
         </div>
