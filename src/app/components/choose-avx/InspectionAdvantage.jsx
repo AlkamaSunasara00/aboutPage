@@ -70,10 +70,10 @@ export default function InspectionAdvantage() {
     <section className="relative py-10 px-6 overflow-hidden font-secondary text-primary">
 
       {/* Fine grid */}
-    
+
 
       {/* Glow */}
-    
+
 
       <div className="max-w-7xl mx-auto relative">
 
@@ -84,7 +84,7 @@ export default function InspectionAdvantage() {
               Inspection Advantage
             </span>
           </div>
-          <h2 className="font-primary font-bold uppercase leading-[0.9] tracking-[0.5px] mb-4 text-5xl">
+          <h2 className="font-primary text-3xl sm:text-4xl lg:text-5xl font-bold uppercase leading-[0.9] tracking-[0.5px] mb-4">
             Optional
             <br />
             <span className="text-fourth">Re-Assurance.</span>
@@ -99,7 +99,7 @@ export default function InspectionAdvantage() {
         ═══════════════════════════════════════ */}
 
         {/* Step selector row */}
-        <div className="relative flex items-start gap-0 mb-10">
+        <div className="relative flex flex-col lg:flex-row items-start gap-10 lg:gap-0 mb-10">
 
           {steps.map((s, i) => {
             const Icon = s.icon;
@@ -107,7 +107,7 @@ export default function InspectionAdvantage() {
             const isDone = i < active;
 
             return (
-              <div key={i} className="flex items-start flex-1">
+              <div key={i} className="flex items-start flex-col lg:flex-row flex-1">
 
                 {/* Step button */}
                 <button
@@ -119,10 +119,10 @@ export default function InspectionAdvantage() {
                     {/* Circle node */}
                     <div
                       className={`relative flex items-center justify-center w-10 h-10 rounded-full border-2 shrink-0 transition-all duration-400 ${isAct
-                          ? "border-fourth bg-fourth shadow-lg shadow-fourth/30 scale-110"
-                          : isDone
-                            ? "border-fourth/50 bg-fourth/15"
-                            : "border-white/15 bg-white/4 group-hover:border-white/30"
+                        ? "border-fourth bg-fourth shadow-lg shadow-fourth/30 scale-110"
+                        : isDone
+                          ? "border-fourth/50 bg-fourth/15"
+                          : "border-white/15 bg-white/4 group-hover:border-white/30"
                         }`}
                     >
                       {isDone ? (
@@ -139,14 +139,30 @@ export default function InspectionAdvantage() {
                       )}
                     </div>
 
+
                     {/* Connector line (except last) */}
                     {i < steps.length - 1 && (
-                      <div className="flex-1 h-px mx-3 overflow-hidden rounded-full bg-white/[0.07]">
-                        <div
-                          className="h-full bg-fourth/50 rounded-full transition-all duration-500"
-                          style={{ width: isDone ? "100%" : isAct ? "50%" : "0%" }}
-                        />
-                      </div>
+                      <>
+                        {/* Desktop Horizontal Line */}
+                        <div className="hidden lg:flex flex-1 h-px mx-3 overflow-hidden rounded-full bg-white/[0.07]">
+                          <div
+                            className="h-full bg-fourth/50 rounded-full transition-all duration-500"
+                            style={{
+                              width: isDone ? "100%" : isAct ? "50%" : "0%",
+                            }}
+                          />
+                        </div>
+
+                        {/* Mobile Vertical Line */}
+                        <div className="lg:hidden ml-5 my-2 w-px h-10 bg-white/[0.07] relative">
+                          <div
+                            className="absolute bottom-0 left-0 w-full bg-fourth/50 transition-all duration-500"
+                            style={{
+                              height: isDone ? "100%" : isAct ? "50%" : "0%",
+                            }}
+                          />
+                        </div>
+                      </>
                     )}
                   </div>
 
@@ -161,10 +177,10 @@ export default function InspectionAdvantage() {
                       </span>
                       <span
                         className={`text-[10px] uppercase tracking-[0.18em] font-bold px-2 py-0.5 rounded-full border transition-all duration-300 ${isAct && s.tagBlue
-                            ? "border-fourth/30 text-fourth/70 bg-fourth/8"
-                            : isAct
-                              ? "border-white/20 text-third/60 bg-white/5"
-                              : "border-white/5 text-white/15"
+                          ? "border-fourth/30 text-fourth/70 bg-fourth/8"
+                          : isAct
+                            ? "border-white/20 text-third/60 bg-white/5"
+                            : "border-white/5 text-white/15"
                           }`}
                       >
                         {s.tag}
@@ -236,8 +252,8 @@ export default function InspectionAdvantage() {
                 <div>
                   <span
                     className={`text-[10px] uppercase tracking-[0.28em] font-bold px-2.5 py-1 rounded-full border ${current.tagBlue
-                        ? "border-fourth/25 bg-fourth/[0.07] text-fourth/65"
-                        : "border-white/15 bg-white/4 text-third/55"
+                      ? "border-fourth/25 bg-fourth/[0.07] text-fourth/65"
+                      : "border-white/15 bg-white/4 text-third/55"
                       }`}
                   >
                     {current.tag}
@@ -291,8 +307,8 @@ export default function InspectionAdvantage() {
                     <div
                       key={si}
                       className={`flex items-center gap-3 px-3 py-2.5 rounded-xl border transition-all duration-300 ${unlocked
-                          ? "border-fourth/20 bg-fourth/6"
-                          : "border-white/4 bg-transparent opacity-35"
+                        ? "border-fourth/20 bg-fourth/6"
+                        : "border-white/4 bg-transparent opacity-35"
                         }`}
                     >
                       <div

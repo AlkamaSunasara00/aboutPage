@@ -67,7 +67,7 @@ export default function TrustVerification() {
               </p>
             </div>
 
-            <h2 className="font-primary text-5xl lg:text-6xl font-black uppercase leading-[0.95] tracking-tight">
+            <h2 className="font-primary md:text-5xl text-3xl  lg:text-6xl font-black uppercase leading-[0.95] tracking-tight">
               Built on
               <br />
               <span

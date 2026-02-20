@@ -46,12 +46,12 @@ const personas = {
 export default function PerspectiveSwitcher() {
   const [active, setActive]       = useState("buyer");
   const [displayed, setDisplayed] = useState("buyer");
-  const [phase, setPhase]         = useState("idle"); // idle | exit | enter
-  const [direction, setDirection] = useState(1);      // 1 = buyer→consultant, -1 = consultant→buyer
+  const [phase, setPhase]         = useState("idle");
+  const [direction, setDirection] = useState(1);
   const timerRef = useRef(null);
 
-  const data    = personas[displayed];
-  const isBlue  = displayed === "consultant";
+  const data   = personas[displayed];
+  const isBlue = displayed === "consultant";
 
   const switchTo = (id) => {
     if (id === active || phase !== "idle") return;
@@ -69,20 +69,15 @@ export default function PerspectiveSwitcher() {
 
   useEffect(() => () => clearTimeout(timerRef.current), []);
 
-  /* ── animation helpers ── */
-  // exit: slide out in the direction of switch, fade out
-  // enter: slide in from opposite side, fade in
-
-  const exitY  =  direction === 1 ? "-20px" : "20px";
-  const enterY = direction === 1 ? "20px" : "-20px";
+  const exitY  = direction === 1 ? "-20px" : "20px";
+  const enterY = direction === 1 ? "20px"  : "-20px";
 
   const headlineStyle = (i) => {
     const base = {
-      fontSize: "clamp(2.2rem, 4.5vw, 3.8rem)",
+      fontSize: "clamp(1.8rem, 5vw, 3.8rem)",
       color: i === 1 ? (isBlue ? "#007bff" : "rgba(255,254,247,0.45)") : "#fffef7",
       display: "block",
     };
-
     if (phase === "exit")
       return {
         ...base,
@@ -90,19 +85,12 @@ export default function PerspectiveSwitcher() {
         transform: `translateY(${exitY})`,
         transition: `opacity 0.28s ${i * 0.04}s ease-in, transform 0.28s ${i * 0.04}s ease-in`,
       };
-
     if (phase === "enter")
       return {
         ...base,
-        opacity: 1,
-        transform: "translateY(0)",
-        transition: `opacity 0.42s ${0.06 + i * 0.07}s cubic-bezier(0.22,1,0.36,1), transform 0.42s ${0.06 + i * 0.07}s cubic-bezier(0.22,1,0.36,1)`,
-        // starts from shifted position handled via @keyframes per element
         animation: `slideInLine 0.42s ${0.06 + i * 0.07}s cubic-bezier(0.22,1,0.36,1) both`,
-        ['--from-y']: enterY,
+        "--from-y": enterY,
       };
-
-    // idle
     return { ...base, opacity: 1, transform: "translateY(0)", transition: "color 0.5s" };
   };
 
@@ -115,10 +103,8 @@ export default function PerspectiveSwitcher() {
       };
     if (phase === "enter")
       return {
-        opacity: 1,
-        transform: "translateX(0)",
         animation: `slideInFeature 0.44s ${0.1 + i * 0.06}s cubic-bezier(0.22,1,0.36,1) both`,
-        ['--from-x']: direction === 1 ? "18px" : "-18px",
+        "--from-x": direction === 1 ? "18px" : "-18px",
       };
     return { opacity: 1, transform: "translateX(0)" };
   };
@@ -133,7 +119,7 @@ export default function PerspectiveSwitcher() {
     if (phase === "enter")
       return {
         animation: `fadeSlideIn 0.44s 0.32s cubic-bezier(0.22,1,0.36,1) both`,
-        ['--from-y']: enterY,
+        "--from-y": enterY,
       };
     return { opacity: 1 };
   };
@@ -146,14 +132,12 @@ export default function PerspectiveSwitcher() {
         transition: "opacity 0.3s ease-in, transform 0.3s ease-in",
       };
     if (phase === "enter")
-      return {
-        animation: "scaleIn 0.55s 0.15s cubic-bezier(0.22,1,0.36,1) both",
-      };
+      return { animation: "scaleIn 0.55s 0.15s cubic-bezier(0.22,1,0.36,1) both" };
     return { opacity: 1, transform: "scale(1)" };
   };
 
   return (
-    <section className="relative py-10 px-6 overflow-hidden font-secondary text-primary min-h-screen flex flex-col justify-center">
+    <section className="relative py-10 px-4 sm:px-6 overflow-hidden font-secondary text-primary min-h-screen flex flex-col justify-center">
 
       {/* Grid texture */}
       <div
@@ -165,7 +149,7 @@ export default function PerspectiveSwitcher() {
         }}
       />
 
-      {/* Dynamic ambient glow — smooth color transition */}
+      {/* Ambient glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -176,7 +160,7 @@ export default function PerspectiveSwitcher() {
         }}
       />
 
-      {/* Wipe flash overlay — fires on switch */}
+      {/* Wipe flash overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -191,13 +175,13 @@ export default function PerspectiveSwitcher() {
       <div className="max-w-7xl mx-auto w-full relative">
 
         {/* ── TOP TOGGLE BAR ── */}
-        <div className="flex items-center justify-between mb-14">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-0 mb-10 sm:mb-14">
 
           <div>
-            <p className="text-sm tracking-[0.4em] uppercase text-third font-semibold mb-1">
+            <p className="text-[11px] sm:text-sm tracking-[0.4em] uppercase text-third font-semibold mb-1">
               Choose Your Path
             </p>
-            <h2 className="font-primary text-4xl lg:text-5xl font-black uppercase tracking-tight leading-none text-primary">
+            <h2 className="font-primary text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-none text-primary">
               Your{" "}
               <span
                 style={{
@@ -214,12 +198,12 @@ export default function PerspectiveSwitcher() {
           </div>
 
           {/* Pill toggle */}
-          <div className="relative flex items-center p-1 rounded-2xl border border-white/10 bg-white/3 backdrop-blur-sm gap-1">
+          <div className="relative flex items-center p-1 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm gap-1 self-start sm:self-auto">
             {["buyer", "consultant"].map((id) => (
               <button
                 key={id}
                 onClick={() => switchTo(id)}
-                className={`relative z-10 px-5 py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-300 ${
+                className={`relative z-10 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-300 ${
                   active === id
                     ? id === "consultant"
                       ? "bg-fourth text-primary shadow-lg shadow-fourth/20"
@@ -235,13 +219,12 @@ export default function PerspectiveSwitcher() {
 
         {/* ── MAIN PANEL ── */}
         <div
-          className="relative border rounded-3xl overflow-hidden backdrop-blur-sm bg-black/10"
+          className="relative border rounded-2xl sm:rounded-3xl overflow-hidden backdrop-blur-sm bg-black/10"
           style={{
             borderColor: isBlue ? "rgba(0,123,255,0.2)" : "rgba(255,255,255,0.07)",
             transition: "border-color 0.6s ease",
           }}
         >
-
           {/* Top accent line */}
           <div
             className="absolute top-0 left-0 right-0 h-px"
@@ -253,9 +236,9 @@ export default function PerspectiveSwitcher() {
             }}
           />
 
-          {/* Sliding highlight bar behind toggle columns */}
+          {/* Sliding column highlight — desktop only */}
           <div
-            className="absolute top-0 bottom-0 w-1/2 pointer-events-none"
+            className="hidden lg:block absolute top-0 bottom-0 w-1/2 pointer-events-none"
             style={{
               left: isBlue ? "50%" : "0%",
               background: isBlue
@@ -265,16 +248,17 @@ export default function PerspectiveSwitcher() {
             }}
           />
 
-          <div className="grid lg:grid-cols-[1fr_1px_1fr]">
+          {/* On mobile: stacked. On desktop: side-by-side with divider */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]">
 
             {/* ── LEFT: ROLE IDENTITY ── */}
-            <div className="relative p-10 lg:p-14 flex flex-col justify-between min-h-120">
+            <div className="relative p-8 sm:p-10 lg:p-14 flex flex-col justify-between min-h-[360px] sm:min-h-[420px] lg:min-h-[480px]">
 
               {/* Ghost index */}
               <div
-                className="absolute top-8 right-10 font-primary font-black select-none leading-none"
+                className="absolute top-6 right-6 sm:top-8 sm:right-10 font-primary font-black select-none leading-none"
                 style={{
-                  fontSize: "clamp(5rem,12vw,9rem)",
+                  fontSize: "clamp(4rem, 12vw, 9rem)",
                   color: isBlue ? "rgba(0,123,255,0.06)" : "rgba(255,254,247,0.04)",
                   transition: "color 0.5s ease",
                   ...indexStyle(),
@@ -304,8 +288,8 @@ export default function PerspectiveSwitcher() {
                 {data.role}
               </div>
 
-              {/* Headline stacked */}
-              <div className="mt-6 flex-1 flex flex-col justify-center">
+              {/* Headline */}
+              <div className="mt-5 sm:mt-6 flex-1 flex flex-col justify-center">
                 {data.headline.map((line, i) => (
                   <div key={`${displayed}-${i}`} className="overflow-hidden">
                     <span
@@ -319,13 +303,12 @@ export default function PerspectiveSwitcher() {
               </div>
 
               {/* Sub + CTA */}
-              <div className="mt-10" style={leftMetaStyle()}>
-                <p className="text-third/60 text-sm leading-relaxed mb-6 max-w-xs">
+              <div className="mt-8 sm:mt-10" style={leftMetaStyle()}>
+                <p className="text-third/60 text-sm leading-relaxed mb-5 sm:mb-6 max-w-xs">
                   {data.sub}
                 </p>
-
                 <button
-                  className="group flex items-center gap-3 px-6 py-3.5 rounded-xl font-primary text-[12px] font-bold uppercase tracking-[0.18em] transition-all duration-300"
+                  className="group flex items-center gap-3 px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl font-primary text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.18em] transition-all duration-300"
                   style={{
                     backgroundColor: isBlue ? "#007bff" : "rgba(255,255,255,0.10)",
                     color: "#fffef7",
@@ -343,7 +326,7 @@ export default function PerspectiveSwitcher() {
               </div>
             </div>
 
-            {/* ── CENTER DIVIDER ── */}
+            {/* ── CENTER DIVIDER — desktop only ── */}
             <div
               className="hidden lg:block w-px self-stretch"
               style={{
@@ -354,10 +337,21 @@ export default function PerspectiveSwitcher() {
               }}
             />
 
-            {/* ── RIGHT: FEATURES ── */}
-            <div className="p-10 lg:p-14 flex flex-col justify-center">
+            {/* Horizontal divider — mobile only */}
+            <div
+              className="block lg:hidden h-px mx-8 sm:mx-10"
+              style={{
+                background: isBlue
+                  ? "linear-gradient(to right, transparent, rgba(0,123,255,0.2), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(255,255,255,0.07), transparent)",
+                transition: "background 0.6s ease",
+              }}
+            />
 
-              <p className="text-[12px] tracking-[0.3em] uppercase text-third/40 font-semibold mb-7">
+            {/* ── RIGHT: FEATURES ── */}
+            <div className="p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
+
+              <p className="text-[11px] sm:text-[12px] tracking-[0.3em] uppercase text-third/40 font-semibold mb-6 sm:mb-7">
                 Platform Features
               </p>
 
@@ -367,7 +361,7 @@ export default function PerspectiveSwitcher() {
                   return (
                     <div
                       key={`${displayed}-feat-${i}`}
-                      className={`group flex items-center gap-5 py-4 border-b -mx-2 px-2 rounded-lg ${
+                      className={`group flex items-center gap-3 sm:gap-5 py-3.5 sm:py-4 border-b -mx-2 px-2 rounded-lg ${
                         i === 0 ? "border-t" : ""
                       }`}
                       style={{
@@ -377,31 +371,31 @@ export default function PerspectiveSwitcher() {
                       }}
                     >
                       {/* Number */}
-                      <span className="font-primary text-[11px] font-black text-third/40 w-5 shrink-0 tabular-nums">
+                      <span className="font-primary text-[10px] sm:text-[11px] font-black text-third/40 w-5 shrink-0 tabular-nums">
                         {String(i + 1).padStart(2, "0")}
                       </span>
 
                       {/* Icon */}
                       <div
-                        className="flex items-center justify-center w-9 h-9 rounded-xl shrink-0 transition-all duration-300"
+                        className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl shrink-0 transition-all duration-300"
                         style={{
                           backgroundColor: isBlue ? "rgba(0,123,255,0.10)" : "rgba(255,255,255,0.05)",
                           color: isBlue ? "rgba(0,123,255,0.6)" : "rgba(190,190,190,0.4)",
                         }}
                       >
-                        <Icon size={15} />
+                        <Icon size={14} />
                       </div>
 
                       {/* Text */}
                       <div className="flex-1 min-w-0">
-                        <p className="text-[13px] font-semibold text-primary/80 group-hover:text-primary transition-colors duration-200 truncate">
+                        <p className="text-[12px] sm:text-[13px] font-semibold text-primary/80 group-hover:text-primary transition-colors duration-200 truncate">
                           {item.text}
                         </p>
                       </div>
 
-                      {/* Note tag */}
+                      {/* Note tag — hidden on very small screens */}
                       <span
-                        className="text-[10px] uppercase tracking-[0.2em] font-bold px-2 py-1 rounded-md shrink-0 transition-all duration-300"
+                        className="hidden xs:inline-block text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-bold px-2 py-1 rounded-md shrink-0 transition-all duration-300"
                         style={{
                           color: isBlue ? "rgba(0,123,255,0.5)" : "rgba(190,190,190,0.5)",
                           backgroundColor: isBlue ? "rgba(0,123,255,0.06)" : "rgba(255,255,255,0.03)",
@@ -414,13 +408,13 @@ export default function PerspectiveSwitcher() {
                 })}
               </div>
 
-              {/* Persona indicator */}
-              <div className="flex items-center gap-3 mt-8">
+              {/* Persona indicator dots */}
+              <div className="flex items-center gap-3 mt-7 sm:mt-8">
                 {["buyer", "consultant"].map((id) => (
                   <button
                     key={id}
                     onClick={() => switchTo(id)}
-                    className="rounded-full transition-all duration-400"
+                    className="rounded-full"
                     style={{
                       height: "4px",
                       width: active === id ? "32px" : "12px",
@@ -458,6 +452,11 @@ export default function PerspectiveSwitcher() {
         @keyframes scaleIn {
           from { opacity: 0; transform: scale(0.82); }
           to   { opacity: 1; transform: scale(1); }
+        }
+
+        /* xs breakpoint for note tags */
+        @media (min-width: 480px) {
+          .xs\\:inline-block { display: inline-block; }
         }
       `}</style>
     </section>
