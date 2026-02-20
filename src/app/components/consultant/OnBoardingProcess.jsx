@@ -152,7 +152,7 @@ export default function OnboardingProcess() {
                   >
                     {(isActive || isDone) && (
                       <div
-                        className="absolute left-[10] w-8 h-8 rounded-full blur-lg opacity-30"
+                        className="absolute left-2.5 w-8 h-8 rounded-full blur-lg opacity-30"
                         style={{ background: isDone ? "#10b981" : step.color }}
                       />
                     )}
