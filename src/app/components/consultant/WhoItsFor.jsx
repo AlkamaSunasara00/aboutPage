@@ -73,7 +73,7 @@ export default function WhoItsFor() {
                 />
 
                 {/* DEFAULT OVERLAY */}
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/60 to-transparent" />
 
                 {/* SLIDE OVERLAY */}
                 <div
@@ -89,7 +89,7 @@ export default function WhoItsFor() {
                     {item.desc}
                   </p>
 
-                  <div className="w-12 h-[2px] bg-fourth opacity-80" />
+                  <div className="w-12 h-[2] bg-fourth opacity-80" />
                 </div>
 
                 {/* DEFAULT TITLE */}
@@ -103,7 +103,7 @@ export default function WhoItsFor() {
                   </h3>
 
                   <div
-                    className={`w-10 h-[2px] bg-fourth mt-3 opacity-70 transition duration-300
+                    className={`w-10 h-[2] bg-fourth mt-3 opacity-70 transition duration-300
                     ${isActive ? "opacity-0" : "opacity-70"}
                     lg:group-hover:opacity-0`}
                   />

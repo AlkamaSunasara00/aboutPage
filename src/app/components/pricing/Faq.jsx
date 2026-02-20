@@ -32,7 +32,7 @@ export default function FAQ() {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="relative py-10 md:py-15 overflow-hidden">
+    <section className="relative py-10 md:py-10 overflow-hidden">
 
       <div className="max-w-3xl mx-auto px-5 md:px-6">
 
@@ -46,7 +46,7 @@ export default function FAQ() {
   style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
 >
   Frequently asked{" "}
-  <span className="bg-gradient-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent">
+  <span className="bg-fourth bg-clip-text text-transparent">
     questions
   </span>
 </motion.h2>
@@ -78,13 +78,13 @@ export default function FAQ() {
                   {/* animated +/- sign */}
                   <div className="relative w-5 h-5 shrink-0 flex items-center justify-center">
                     {/* horizontal bar — always visible */}
-                    <div className="absolute w-[14px] h-[1.5px] bg-[#1a1a18] rounded-full" />
+                    <div className="absolute w-[14] h-[1.5] bg-[#1a1a18] rounded-full" />
 
                     {/* vertical bar — rotates out when open */}
                     <motion.div
                       animate={{ rotate: isOpen ? 90 : 0, opacity: isOpen ? 0 : 1 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
-                      className="absolute w-[1.5px] h-[14px] bg-[#1a1a18] rounded-full"
+                      className="absolute w-[1.5px] h-[14] bg-[#1a1a18] rounded-full"
                     />
                   </div>
                 </button>

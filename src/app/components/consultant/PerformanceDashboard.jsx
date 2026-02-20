@@ -147,7 +147,7 @@ export default function PerformanceDashboard() {
             <h2 className="text-[32px] sm:text-[42px] md:text-[52px] font-bold leading-[1.08] text-primary">
               Operate with Data,
               <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent">
+              <span className="text-fourth">
                 Not Guesswork.
               </span>
             </h2>
@@ -229,34 +229,12 @@ export default function PerformanceDashboard() {
               </div>
 
               {/* CHART */}
-              <div className="h-[220px] w-full">
+              <div className="h-[220] w-full">
                 <MetricBarChart data={active.data} color={active.color} />
               </div>
-
-              {/* WEEK HIGHLIGHT */}
-              {/* <div className="flex justify-between px-2">
-                {active.data.map((v, i) => (
-                  <div key={i} className="flex flex-col items-center gap-1">
-                    <span
-                      className={`text-[9px] font-semibold uppercase ${
-                        i === peakIndex ? "text-fourth" : "text-[#374151]"
-                      }`}
-                    >
-                      W{i + 1}
-                    </span>
-
-                    <div
-                      className={`h-1 w-6 rounded-full ${
-                        i === peakIndex ? "bg-fourth" : "bg-[#1f2937]"
-                      }`}
-                    />
-                  </div>
-                ))}
-              </div> */}
-
-              {/* MINI STATS */}
+              
               <div className="grid grid-cols-3 gap-3 pt-2 border-t border-[#1f2937]">
-                {[
+               {[
                   { l: "Peak Week", v: `W${peakIndex + 1}` },
                   { l: "Avg / Week", v: `${(active.data.reduce((a,b)=>a+b,0)/active.data.length).toFixed(1)}` },
                   { l: "Growth", v: active.delta },
