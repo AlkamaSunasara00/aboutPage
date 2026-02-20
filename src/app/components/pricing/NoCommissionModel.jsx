@@ -5,9 +5,9 @@ import { FiArrowRight } from "react-icons/fi";
 
 export default function NoCommissionModel() {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
+    <section className="relative py-20 sm:py-20 lg:py-20 overflow-hidden">
       {/* decorative 0% watermark */}
-      <div className="absolute right-[-80px] top-1/2 -translate-y-1/2 text-[220px] md:text-[300px] font-black text-white/[0.018] select-none pointer-events-none hidden lg:block leading-none">
+      <div className="absolute right-[-80] top-1/2 -translate-y-1/2 text-[220px] md:text-[300px] font-black text-white/[0.018] select-none pointer-events-none hidden lg:block leading-none">
         0%
       </div>
 
@@ -64,7 +64,7 @@ export default function NoCommissionModel() {
             </div>
           </motion.div>
 
-          <div className="hidden lg:block w-px bg-gradient-to-b from-transparent via-[#1f2937] to-transparent mx-8 self-stretch" />
+          <div className="hidden lg:block w-px bg-linear-to-b from-transparent via-[#1f2937] to-transparent mx-8 self-stretch" />
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -98,7 +98,7 @@ export default function NoCommissionModel() {
                 viewport={{ once: true }}
                 className="group flex items-start gap-6 py-7 first:pt-0 last:pb-0 cursor-default"
               >
-                <span className="text-[18px] text-fourth md:text-[#2d3748] lg:text-[#2d3748]  font-bold text-[#2d3748] group-hover:text-fourth transition-colors duration-200 pt-1 shrink-0 tabular-nums w-5">
+                <span className="text-[18px] text-fourth md:text-[#2d3748] lg:text-[#2d3748]  font-bold group-hover:text-fourth transition-colors duration-200 pt-1 shrink-0 tabular-nums w-5">
                   {item.label}
                 </span>
 

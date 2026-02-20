@@ -79,7 +79,7 @@ export default function OnboardingProcess() {
 
           <h2 className="text-[30px] sm:text-[40px] md:text-[48px] font-bold leading-tight text-primary mb-3">
             Onboarding in{" "}
-            <span className="bg-gradient-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent">
               5 Simple Steps
             </span>
           </h2>
@@ -152,7 +152,7 @@ export default function OnboardingProcess() {
                   >
                     {(isActive || isDone) && (
                       <div
-                        className="absolute left-[10px] w-8 h-8 rounded-full blur-lg opacity-30"
+                        className="absolute left-[10] w-8 h-8 rounded-full blur-lg opacity-30"
                         style={{ background: isDone ? "#10b981" : step.color }}
                       />
                     )}

@@ -71,7 +71,7 @@ export default function WhatYouGetSpotlight() {
 
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] font-semibold leading-[1.08] tracking-tight text-primary max-w-xl">
             Everything you need to{" "}
-            <span className="bg-gradient-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent font-bold">
+            <span className="bg-linear-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent font-bold">
               dominate
             </span>{" "}
             your market.
@@ -82,7 +82,7 @@ export default function WhatYouGetSpotlight() {
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
           {/* LEFT */}
           {/* LEFT — Improved Feature Nav */}
-          <div className="lg:w-[360px] shrink-0">
+          <div className="lg:w-[360] shrink-0">
             <div className="flex flex-col gap-2.5">
               {features.map((f, i) => {
                 const isActive = activeFeature === i;
@@ -94,13 +94,13 @@ export default function WhatYouGetSpotlight() {
                     className={`relative group text-left rounded-xl px-5 py-4 transition-all duration-300 border overflow-hidden hover:cursor-pointer
             ${
               isActive
-                ? "border-fourth/40 bg-gradient-to-r from-[#0d1b2e] to-[#0b1320] shadow-[0_0_0_1px_rgba(59,130,246,0.15),0_10px_30px_rgba(0,0,0,0.4)]"
+                ? "border-fourth/40 bg-linear-to-r from-[#0d1b2e] to-[#0b1320] shadow-[0_0_0_1px_rgba(59,130,246,0.15),0_10px_30px_rgba(0,0,0,0.4)]"
                 : "border-[#1f2937] bg-[#0f1117]/60 hover:border-[#2d3748] hover:bg-[#0f1117]"
             }`}
                   >
                     {/* Active glow accent */}
                     {isActive && (
-                      <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-fourth rounded-r-full" />
+                      <div className="absolute left-0 top-0 bottom-0 w-[3] bg-fourth rounded-r-full" />
                     )}
 
                     <div className="flex items-center gap-4">
@@ -134,7 +134,7 @@ export default function WhatYouGetSpotlight() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex-1 min-h-[300px]"
+            className="flex-1 min-h-[300]"
           >
             <div className="relative h-full rounded-2xl border border-[#1f2937] overflow-hidden">
               {/* Dynamic Background */}

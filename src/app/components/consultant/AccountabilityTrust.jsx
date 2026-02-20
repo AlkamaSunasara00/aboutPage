@@ -107,22 +107,6 @@ export default function AccountabilityTrust() {
 
         </div>
 
-        {/* CTA */}
-        {/* <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-4 border border-[#1a1f2b] rounded-xl px-6 py-4 bg-[#0b0e13]">
-
-          <p className="text-[13px] text-gray-400 text-center sm:text-left">
-            Trust isn’t a feature — it’s the foundation AVX is built on.
-          </p>
-
-          <a
-            href="/consultant/register"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 transition"
-          >
-            Join as Verified Consultant
-          </a>
-
-        </div> */}
-
       </div>
     </section>
   );

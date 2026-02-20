@@ -61,7 +61,7 @@ export default function GrowthTools() {
 
             <h2 className="text-[34px] sm:text-[42px] md:text-[50px] font-bold leading-[1.08] text-primary">
               Boost Your{" "}
-              <span className="bg-gradient-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent">
                 Visibility
               </span>
             </h2>
