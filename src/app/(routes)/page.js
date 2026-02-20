@@ -1,9 +1,7 @@
-
-
-export default function AvxWorksPage() {
+export default function HomePage() {
   return (
     <>
-      <h1>HELLO WORLD</h1>
+    <h1>HELLO WORLD</h1>
     </>
   );
 }
