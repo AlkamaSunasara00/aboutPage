@@ -16,7 +16,7 @@ export default function PricingHero({ yearly, setYearly }) {
       />
 
       {/* very subtle bottom darkening so text stays readable — no white */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-black/40" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-b from-transparent to-black/40" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
 
@@ -38,7 +38,7 @@ export default function PricingHero({ yearly, setYearly }) {
           className="text-[34px] sm:text-[48px] md:text-[60px] font-semibold leading-[1.08] text-white"
         >
           Simple, Structured{" "}
-          <span className="bg-gradient-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent font-bold">
+          <span className="bg-linear-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent font-bold">
             Pricing
           </span>
         </motion.h1>
@@ -72,7 +72,7 @@ export default function PricingHero({ yearly, setYearly }) {
             <motion.div
               animate={{ x: yearly ? 28 : 2 }}
               transition={{ type: "spring", stiffness: 400, damping: 28 }}
-              className="absolute top-[3px] w-[22px] h-[22px] rounded-full bg-fourth shadow-md"
+              className="absolute top-[3] w-[22] h-[22] rounded-full bg-fourth shadow-md"
             />
           </button>
 

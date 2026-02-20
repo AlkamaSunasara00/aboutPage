@@ -116,7 +116,7 @@ export default function FullPricing() {
       {/* CARDS — div NOT section, inline style beats global CSS */}
       <div
         id="pricing-table"
-        className="relative z-10 -mt-64"
+        className="relative z-10 -mt-64 mb-0"
         style={{ background: "#ffffff" }}
       >
         <div className=" relative -top-40 max-w-6xl mx-auto px-5 sm:px-6 pt-0">
@@ -265,22 +265,35 @@ export default function FullPricing() {
                 {addons.map((addon, i) => (
                   <div
                     key={i}
-                    className="flex flex-col sm:flex-row sm:items-center gap-4 px-6 py-5 transition-colors duration-200 hover:bg-gray-900"
+                    className="group grid grid-cols-[48px_1fr] sm:flex sm:items-center gap-4 px-5 sm:px-6 py-5 sm:py-6 transition-colors duration-200 hover:bg-white/[0.03]"
                   >
-                    <div className="w-11 h-11 rounded-xl bg-fourth/10 border border-fourth/20 flex items-center justify-center text-lg text-fourth shrink-0">
+                    {/* ICON */}
+                    <div className="w-12 h-12 rounded-xl bg-fourth/10 border border-fourth/20 flex items-center justify-center text-lg text-fourth shrink-0">
                       {addon.icon}
                     </div>
-                    <div className="flex-1">
-                      <p className="text-[15px] font-semibold text-white">
+
+                    {/* CONTENT */}
+                    <div className="flex flex-col justify-center">
+                      <p className="text-[15px] font-semibold text-white leading-tight">
                         {addon.title}
                       </p>
-                      <p className="text-[13px] text-white/60 mt-0.5 leading-relaxed">
+
+                      <p className="text-[13px] text-white/60 mt-1 leading-relaxed max-w-md">
                         {addon.desc}
                       </p>
+
+                      {/* MOBILE BADGE */}
+                      <span className="mt-3 sm:hidden inline-flex w-fit text-[10px] font-semibold text-fourth border border-fourth/20 bg-fourth/10 px-3 py-1 rounded-full">
+                        Optional
+                      </span>
                     </div>
-                    <span className="text-[10px] font-semibold text-fourth border border-fourth/20 bg-fourth/10 px-3 py-1 rounded-full self-start sm:self-center whitespace-nowrap">
-                      Optional
-                    </span>
+
+                    {/* DESKTOP BADGE */}
+                    <div className="hidden sm:block ml-auto">
+                      <span className="text-[10px] font-semibold text-fourth border border-fourth/20 bg-fourth/10 px-3 py-1 rounded-full whitespace-nowrap">
+                        Optional
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>

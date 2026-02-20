@@ -62,7 +62,7 @@ export default function TierStructure() {
 
           <h2 className="text-[34px] sm:text-[42px] md:text-[48px] font-semibold leading-tight text-primary">
             Choose a Tier That Matches{" "}
-            <span className="bg-gradient-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent font-bold">
+            <span className="bg-linear-to-r from-fourth via-[#60a5fa] to-fourth bg-clip-text text-transparent font-bold">
               Your Scale
             </span>
           </h2>
@@ -85,8 +85,8 @@ export default function TierStructure() {
               viewport={{ once: true }}
               className={`relative rounded-2xl p-8 text-left transition-all duration-300 backdrop-blur-xl ${
                 tier.highlight
-                  ? "bg-gradient-to-b from-[#0b2a4a]/70 via-[#0d1b2e]/60 to-transparent border border-fourth/40 shadow-[0_40px_100px_rgba(0,0,0,0.9)] scale-[1.09]"
-                  : "bg-white/[0.04] border border-white/10"
+                  ? "bg-linear-to-b from-[#0b2a4a]/70 via-[#0d1b2e]/60 to-transparent border border-fourth/40 shadow-[0_40px_100px_rgba(0,0,0,0.9)] scale-[1.09]"
+                  : "bg-white/4 border border-white/10"
               }`}
             >
 
@@ -96,7 +96,7 @@ export default function TierStructure() {
               )}
 
               {/* glass inner gradient */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/[0.06] to-transparent pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl bg-linear-to-b from-white/6 to-transparent pointer-events-none" />
 
               {/* highlight badge */}
               {tier.highlight && (
@@ -121,7 +121,7 @@ export default function TierStructure() {
                 </p>
 
                 {/* divider */}
-                <div className="my-7 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="my-7 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
                 {/* FEATURES */}
                 <div className="space-y-3">
