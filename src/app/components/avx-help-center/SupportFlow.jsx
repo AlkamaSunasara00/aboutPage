@@ -8,22 +8,22 @@ import {
 } from "lucide-react";
 
 const ISSUE_TYPES = [
-  { value: "vehicle",    label: "Vehicle Inquiry",        icon: Car },
-  { value: "inspection", label: "Inspection Issue",       icon: ClipboardList },
-  { value: "listing",    label: "Listing Issue",          icon: FileText },
-  { value: "consultant", label: "Consultant Behavior",    icon: UserX },
-  { value: "billing",    label: "Subscription / Billing", icon: CreditCard },
-  { value: "ppc",        label: "PPC Campaign",           icon: Megaphone },
-  { value: "account",    label: "Account Access",         icon: LockKeyhole },
+  { value: "vehicle", label: "Vehicle Inquiry", icon: Car },
+  { value: "inspection", label: "Inspection Issue", icon: ClipboardList },
+  { value: "listing", label: "Listing Issue", icon: FileText },
+  { value: "consultant", label: "Consultant Behavior", icon: UserX },
+  { value: "billing", label: "Subscription / Billing", icon: CreditCard },
+  { value: "ppc", label: "PPC Campaign", icon: Megaphone },
+  { value: "account", label: "Account Access", icon: LockKeyhole },
 ];
 
 const RELATED_MAP = {
   vehicle: {
     heading: "Saved / Inquired Vehicles",
     items: [
-      { id: "v1", label: "2023 Toyota Camry",   meta: "Inquiry #4821", icon: Car },
-      { id: "v2", label: "2021 Honda Civic",     meta: "Inquiry #3904", icon: Car },
-      { id: "v3", label: "2022 BMW 3-Series",    meta: "Inquiry #5112", icon: Car },
+      { id: "v1", label: "2023 Toyota Camry", meta: "Inquiry #4821", icon: Car },
+      { id: "v2", label: "2021 Honda Civic", meta: "Inquiry #3904", icon: Car },
+      { id: "v3", label: "2022 BMW 3-Series", meta: "Inquiry #5112", icon: Car },
     ],
   },
   inspection: {
@@ -37,18 +37,18 @@ const RELATED_MAP = {
   listing: {
     heading: "Listed Vehicles",
     items: [
-      { id: "l1", label: "Hyundai Tucson",       meta: "Listing #LST-0041", icon: FileText },
-      { id: "l2", label: "Ford Ranger",           meta: "Listing #LST-0038", icon: FileText },
-      { id: "l3", label: "Kia Sorento",           meta: "Listing #LST-0055", icon: FileText },
+      { id: "l1", label: "Hyundai Tucson", meta: "Listing #LST-0041", icon: FileText },
+      { id: "l2", label: "Ford Ranger", meta: "Listing #LST-0038", icon: FileText },
+      { id: "l3", label: "Kia Sorento", meta: "Listing #LST-0055", icon: FileText },
     ],
   },
 };
 
 const STEPS = [
-  { number: "01", label: "Issue Type",   sub: "Select a category" },
+  { number: "01", label: "Issue Type", sub: "Select a category" },
   { number: "02", label: "Related Item", sub: "Link to a record" },
-  { number: "03", label: "Describe",     sub: "Explain the issue" },
-  { number: "04", label: "Review",       sub: "Confirm & submit" },
+  { number: "03", label: "Describe", sub: "Explain the issue" },
+  { number: "04", label: "Review", sub: "Confirm & submit" },
 ];
 
 const SLA_SECONDS = 48 * 60 * 60;
@@ -63,7 +63,7 @@ function formatTimer(secs) {
 function StepHeading({ number, title, sub }) {
   return (
     <div className="flex items-start gap-4">
-      <span className="font-primary text-5xl font-black text-white/4 leading-none select-none">{number}</span>
+      <span className="font-primary text-5xl font-black text-primary/4 leading-none select-none">{number}</span>
       <div>
         <h3 className="font-primary text-xl font-black text-primary tracking-tight">{title}</h3>
         <p className="text-third/40 text-sm mt-0.5">{sub}</p>
@@ -74,7 +74,7 @@ function StepHeading({ number, title, sub }) {
 
 function SummaryRow({ label, value, padded, border }) {
   return (
-    <div className={`flex items-start justify-between gap-4 ${padded ? "px-4 py-3" : ""} ${border ? "border-t border-white/6" : ""}`}>
+    <div className={`flex items-start justify-between gap-4 ${padded ? "px-4 py-3" : ""} ${border ? "border-t border-primary/6" : ""}`}>
       <span className="text-xs uppercase tracking-widest text-third/35 shrink-0">{label}</span>
       <span className="text-sm text-primary/80 text-right">{value}</span>
     </div>
@@ -83,21 +83,21 @@ function SummaryRow({ label, value, padded, border }) {
 
 // Props:
 //   onTicketCreated(newTicket) — called after submit, parent handles navigation
-export default function SupportFlow({ onTicketCreated = () => {} }) {
-  const [step, setStep]               = useState(0);
-  const [issueType, setIssueType]     = useState("");
-  const [dropOpen, setDropOpen]       = useState(false);
+export default function SupportFlow({ onTicketCreated = () => { } }) {
+  const [step, setStep] = useState(0);
+  const [issueType, setIssueType] = useState("");
+  const [dropOpen, setDropOpen] = useState(false);
   const [relatedItem, setRelatedItem] = useState(null);
   const [description, setDescription] = useState("");
-  const [uploads, setUploads]         = useState([]);
-  const [submitted, setSubmitted]     = useState(false);
-  const [slaElapsed, setSlaElapsed]   = useState(0);
-  const [ticketId]                    = useState(() => "TKT-" + Math.floor(100000 + Math.random() * 900000));
-  const [submitTime]                  = useState(() => new Date());
-  const fileRef  = useRef();
+  const [uploads, setUploads] = useState([]);
+  const [submitted, setSubmitted] = useState(false);
+  const [slaElapsed, setSlaElapsed] = useState(0);
+  const [ticketId] = useState(() => "TKT-" + Math.floor(100000 + Math.random() * 900000));
+  const [submitTime] = useState(() => new Date());
+  const fileRef = useRef();
   const timerRef = useRef(null);
 
-  const selected     = ISSUE_TYPES.find(i => i.value === issueType);
+  const selected = ISSUE_TYPES.find(i => i.value === issueType);
   const relatedGroup = RELATED_MAP[issueType] || null;
   const canNext0 = !!issueType;
   const canNext1 = !relatedGroup || !!relatedItem;
@@ -111,7 +111,7 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
     return () => clearInterval(timerRef.current);
   }, [submitted]);
 
-  const handleFile   = (e) => {
+  const handleFile = (e) => {
     const files = Array.from(e.target.files || []);
     setUploads(prev => [...prev, ...files.map(f => ({ name: f.name, type: f.type }))]);
   };
@@ -139,7 +139,7 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
   /* ── SUCCESS STATE ── */
   if (submitted) {
     const remaining = Math.max(0, SLA_SECONDS - slaElapsed);
-    const pctUsed   = Math.min(100, (slaElapsed / SLA_SECONDS) * 100);
+    const pctUsed = Math.min(100, (slaElapsed / SLA_SECONDS) * 100);
 
     return (
       <section className="min-h-screen flex items-center justify-center px-4 py-16">
@@ -154,14 +154,14 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
             </div>
           </div>
 
-          <div className="border border-white/8 rounded-2xl overflow-hidden bg-white/2">
-            <SummaryRow label="Status"  value={<span className="inline-flex items-center gap-1.5 text-fourth font-semibold"><span className="w-1.5 h-1.5 rounded-full bg-fourth inline-block animate-pulse" />Open</span>} padded />
-            <SummaryRow label="Issue"   value={selected?.label} padded border />
+          <div className="border border-primary/8 rounded-2xl overflow-hidden bg-primary/2">
+            <SummaryRow label="Status" value={<span className="inline-flex items-center gap-1.5 text-fourth font-semibold"><span className="w-1.5 h-1.5 rounded-full bg-fourth inline-block animate-pulse" />Open</span>} padded />
+            <SummaryRow label="Issue" value={selected?.label} padded border />
             {relatedItem && <SummaryRow label="Related" value={relatedItem.label} padded border />}
             <SummaryRow label="Created" value={submitTime.toLocaleString()} padded border />
           </div>
 
-          <div className="border border-white/8 rounded-2xl bg-white/2 overflow-hidden">
+          <div className="border border-primary/8 rounded-2xl bg-primary/2 overflow-hidden">
             <div className="px-5 pt-5 pb-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Timer size={14} className="text-fourth" />
@@ -174,7 +174,7 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                 </span>
               </div>
             </div>
-            <div className="h-1 bg-white/5 mx-5 mb-5 rounded-full overflow-hidden">
+            <div className="h-1 bg-primary/5 mx-5 mb-5 rounded-full overflow-hidden">
               <div
                 className="h-full rounded-full transition-all duration-1000"
                 style={{
@@ -214,23 +214,22 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
 
           {/* Sidebar */}
           <div className="w-full lg:w-72 shrink-0 lg:sticky lg:top-8">
-            <div className="border border-white/8 rounded-2xl bg-white/2 backdrop-blur-sm overflow-hidden">
-              <div className="px-6 py-5 border-b border-white/6">
+            <div className="border border-primary/8 rounded-2xl bg-primary/2 backdrop-blur-sm overflow-hidden">
+              <div className="px-6 py-5 border-b border-primary/6">
                 <p className="text-xs uppercase tracking-widest text-third/35 font-semibold">Progress</p>
-                <div className="mt-3 h-1 bg-white/5 rounded-full overflow-hidden">
+                <div className="mt-3 h-1 bg-primary/5 rounded-full overflow-hidden">
                   <div className="h-full bg-fourth rounded-full transition-all duration-500 ease-out" style={{ width: `${progressPct}%` }} />
                 </div>
                 <p className="text-xs text-third/30 mt-2">Step {step + 1} of 4</p>
               </div>
               <div className="p-3 space-y-0.5">
                 {STEPS.map((s, i) => {
-                  const isDone    = i < step;
+                  const isDone = i < step;
                   const isCurrent = i === step;
                   return (
-                    <div key={i} className={`flex items-center gap-3.5 px-3 py-3 rounded-xl transition-all duration-300 ${isCurrent ? "bg-white/5" : ""}`}>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-black font-primary shrink-0 transition-all duration-300 ${
-                        isDone ? "bg-fourth text-primary" : isCurrent ? "border border-fourth text-fourth" : "border border-white/10 text-third/25"
-                      }`}>
+                    <div key={i} className={`flex items-center gap-3.5 px-3 py-3 rounded-xl transition-all duration-300 ${isCurrent ? "bg-primary/5" : ""}`}>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-black font-primary shrink-0 transition-all duration-300 ${isDone ? "bg-fourth text-primary" : isCurrent ? "border border-fourth text-fourth" : "border border-primary/10 text-third/25"
+                        }`}>
                         {isDone ? "✓" : i + 1}
                       </div>
                       <div className="min-w-0 flex-1">
@@ -247,7 +246,7 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                 })}
               </div>
               <div className="px-6 pb-5 pt-1">
-                <p className="text-xs text-third/25 leading-relaxed border-t border-white/5 pt-4">
+                <p className="text-xs text-third/25 leading-relaxed border-t border-primary/5 pt-4">
                   All tickets handled within 48-hour SLA. For urgent issues contact your consultant directly.
                 </p>
               </div>
@@ -256,8 +255,8 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
 
           {/* Form card */}
           <div className="flex-1 w-full ">
-            <div className="border border-white/8 rounded-2xl bg-white/2 backdrop-blur-sm overflow-visible">
-              <div className="h-0.5 bg-white/5 rounded-t-2xl overflow-hidden">
+            <div className="border border-primary/8 rounded-2xl bg-primary/2 backdrop-blur-sm overflow-visible">
+              <div className="h-0.5 bg-primary/5 rounded-t-2xl overflow-hidden">
                 <div className="h-full bg-fourth transition-all duration-500 ease-out" style={{ width: `${progressPct}%` }} />
               </div>
 
@@ -270,7 +269,7 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                     <div className="relative">
                       <button
                         onClick={() => setDropOpen(o => !o)}
-                        className="w-full flex items-center justify-between px-4 py-3.5 rounded-xl border border-white/10 bg-white/3 text-sm text-primary hover:border-white/20 transition-all"
+                        className="w-full flex items-center justify-between px-4 py-3.5 rounded-xl border border-primary/10 bg-primary/3 text-sm text-primary hover:border-primary/20 transition-all"
                       >
                         {selected ? (
                           <span className="flex items-center gap-2.5 text-primary">
@@ -283,12 +282,12 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                         <ChevronDown size={14} className={`text-third/40 transition-transform duration-200 shrink-0 ${dropOpen ? "rotate-180" : ""}`} />
                       </button>
                       {dropOpen && (
-                        <div className="absolute left-0 right-0 z-50 mt-1.5 border border-white/10 rounded-xl shadow-2xl overflow-y-auto" style={{ background: "#161616", maxHeight: "260px", top: "100%" }}>
+                        <div className="absolute left-0 right-0 z-50 mt-1.5 border border-primary/10 rounded-xl shadow-2xl overflow-y-auto" style={{ background: "#161616", maxHeight: "260px", top: "100%" }}>
                           {ISSUE_TYPES.map(({ value, label, icon: Icon }) => (
                             <button
                               key={value}
                               onClick={() => { setIssueType(value); setDropOpen(false); setRelatedItem(null); }}
-                              className={`w-full flex items-center gap-3 px-4 py-3.5 text-sm hover:bg-white/5 transition-colors text-left border-b border-white/4 last:border-0 ${value === issueType ? "text-fourth bg-fourth/5" : "text-third/70"}`}
+                              className={`w-full flex items-center gap-3 px-4 py-3.5 text-sm hover:bg-primary/5 transition-colors text-left border-b border-primary/4 last:border-0 ${value === issueType ? "text-fourth bg-fourth/5" : "text-third/70"}`}
                             >
                               <Icon size={14} className="shrink-0" /> {label}
                             </button>
@@ -321,9 +320,9 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                             const isSelected = relatedItem?.id === item.id;
                             return (
                               <button key={item.id} onClick={() => setRelatedItem(item)}
-                                className={`w-full flex items-center gap-4 px-4 py-4 rounded-xl border transition-all text-left group ${isSelected ? "border-fourth/40 bg-fourth/8" : "border-white/8 bg-white/2 hover:border-white/15 hover:bg-white/3"}`}
+                                className={`w-full flex items-center gap-4 px-4 py-4 rounded-xl border transition-all text-left group ${isSelected ? "border-fourth/40 bg-fourth/8" : "border-primary/8 bg-primary/2 hover:border-primary/15 hover:bg-primary/3"}`}
                               >
-                                <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-all ${isSelected ? "bg-fourth/15" : "bg-white/4 group-hover:bg-white/7"}`}>
+                                <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-all ${isSelected ? "bg-fourth/15" : "bg-primary/4 group-hover:bg-primary/7"}`}>
                                   <Icon size={14} className={isSelected ? "text-fourth" : "text-third/40"} />
                                 </div>
                                 <div className="flex-1 min-w-0">
@@ -337,7 +336,7 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                         </div>
                       </div>
                     ) : (
-                      <div className="flex items-start gap-3 px-4 py-4 rounded-xl border border-white/8 bg-white/2">
+                      <div className="flex items-start gap-3 px-4 py-4 rounded-xl border border-primary/8 bg-primary/2">
                         <AlertCircle size={14} className="text-third/35 mt-0.5 shrink-0" />
                         <p className="text-sm text-third/50 leading-relaxed">
                           <span className="text-third/70 font-semibold">{selected?.label}</span> doesn't require linking to a specific record. Continue to describe your issue.
@@ -356,14 +355,14 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                       onChange={e => setDescription(e.target.value)}
                       rows={6}
                       placeholder="Describe your issue in detail…"
-                      className="w-full bg-white/3 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-primary placeholder-third/30 resize-none focus:outline-none focus:border-fourth/40 transition-colors"
+                      className="w-full bg-primary/3 border border-primary/10 rounded-xl px-4 py-3.5 text-sm text-primary placeholder-third/30 resize-none focus:outline-none focus:border-fourth/40 transition-colors"
                     />
                     <div>
                       <p className="text-xs uppercase tracking-widest text-third/40 mb-3">Attachments (optional)</p>
                       <div className="flex items-center gap-2 flex-wrap mb-3">
                         {[{ label: "Images", icon: Image }, { label: "Documents", icon: FileIcon }, { label: "Video", icon: Video }].map(({ label, icon: Icon }) => (
                           <button key={label} onClick={() => fileRef.current?.click()}
-                            className="flex items-center gap-1.5 px-3 py-2 text-xs text-third/50 border border-white/8 rounded-lg hover:border-white/18 hover:text-third/80 transition-all"
+                            className="flex items-center gap-1.5 px-3 py-2 text-xs text-third/50 border border-primary/8 rounded-lg hover:border-primary/18 hover:text-third/80 transition-all"
                           >
                             <Icon size={12} /> {label}
                           </button>
@@ -373,7 +372,7 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                       {uploads.length > 0 && (
                         <div className="space-y-1.5">
                           {uploads.map((f, i) => (
-                            <div key={i} className="flex items-center justify-between px-3 py-2 rounded-lg border border-white/8 bg-white/2 text-xs text-third/60">
+                            <div key={i} className="flex items-center justify-between px-3 py-2 rounded-lg border border-primary/8 bg-primary/2 text-xs text-third/60">
                               <span className="truncate">{f.name}</span>
                               <button onClick={() => removeUpload(i)} className="ml-2 text-third/30 hover:text-third/70 shrink-0"><X size={12} /></button>
                             </div>
@@ -388,17 +387,17 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                 {step === 3 && (
                   <div className="space-y-5">
                     <StepHeading number="04" title="Review & Submit" sub="Confirm your details before submitting." />
-                    <div className="border border-white/8 rounded-xl overflow-hidden">
-                      <SummaryRow label="Issue"       value={selected?.label} padded />
+                    <div className="border border-primary/8 rounded-xl overflow-hidden">
+                      <SummaryRow label="Issue" value={selected?.label} padded />
                       {relatedItem && <SummaryRow label="Related" value={`${relatedItem.label} — ${relatedItem.meta}`} padded border />}
                       <SummaryRow label="Description" value={description.slice(0, 100) + (description.length > 100 ? "…" : "")} padded border />
                       {uploads.length > 0 && <SummaryRow label="Attachments" value={`${uploads.length} file(s)`} padded border />}
                     </div>
-                    <div className="border border-white/8 rounded-xl overflow-hidden bg-white/2">
-                      <div className="px-4 pt-4 pb-3 border-b border-white/6 flex items-center gap-2">
+                    <div className="border border-primary/8 rounded-xl overflow-hidden bg-primary/2">
+                      <div className="px-4 pt-4 pb-3 border-b border-primary/6 flex items-center gap-2">
                         <Timer size={13} className="text-fourth" />
                         <p className="text-xs uppercase tracking-widest text-third/50 font-semibold">SLA Timer</p>
-                        <span className="ml-auto text-xs text-third/30 border border-white/8 px-2 py-0.5 rounded-full">Starts on submit</span>
+                        <span className="ml-auto text-xs text-third/30 border border-primary/8 px-2 py-0.5 rounded-full">Starts on submit</span>
                       </div>
                       <div className="px-4 py-3.5 space-y-2.5">
                         <div className="flex items-center justify-between">
@@ -414,7 +413,7 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                           <span className="text-xs font-semibold text-primary font-primary">{ticketId}</span>
                         </div>
                         <div className="pt-1">
-                          <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                          <div className="h-1 bg-primary/5 rounded-full overflow-hidden">
                             <div className="h-full bg-fourth rounded-full" style={{ width: "0%" }} />
                           </div>
                           <p className="text-xs text-third/25 mt-1.5">Timer will begin counting down immediately after submission.</p>
@@ -425,7 +424,7 @@ export default function SupportFlow({ onTicketCreated = () => {} }) {
                 )}
 
                 {/* Nav buttons */}
-                <div className="flex items-center justify-between pt-2 border-t border-white/5">
+                <div className="flex items-center justify-between pt-2 border-t border-primary/5">
                   {step > 0 ? (
                     <button onClick={() => setStep(s => s - 1)} className="text-sm uppercase tracking-widest text-third/40 hover:text-third/70 transition-colors">
                       ← Back

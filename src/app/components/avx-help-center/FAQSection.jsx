@@ -289,7 +289,7 @@ export default function FAQSections() {
           </div>
 
           <div className="flex flex-col items-end gap-0.5 transition-all duration-300" key={cat.id + "-count"}>
-            <span className="font-black leading-none text-[clamp(2rem,5vw,3.5rem)] transition-colors duration-400 text-[#007bff]/50">
+            <span className="font-black leading-none text-[clamp(2rem,5vw,3.5rem)] transition-colors duration-400 text-fourth/50">
               {String(items.length).padStart(2, "0")}
             </span>
             <span className="text-[12px] text-third/50 uppercase tracking-[0.3em] font-bold">
@@ -301,7 +301,7 @@ export default function FAQSections() {
         {/* HORIZONTAL CATEGORY TAB STRIP */}
         <div className="relative border-y border-primary/10">
           <div
-            className="absolute bottom-0 h-[2px] bg-[#007bff] transition-all duration-400 ease-[cubic-bezier(0.65,0,0.35,1)]"
+            className="absolute bottom-0 h-0.5 bg-fourth transition-all duration-400 ease-[cubic-bezier(0.65,0,0.35,1)]"
             style={{
               width: `${100 / categories.length}%`,
               left: `${(activeCat / categories.length) * 100}%`,
@@ -316,19 +316,19 @@ export default function FAQSections() {
                 <button
                   key={c.id}
                   onClick={() => switchCat(idx)}
-                  className="flex-1 min-w-[100px] sm:min-w-0 flex flex-col items-center gap-1.5 py-4 sm:py-5 px-2 sm:px-4 transition-all duration-250 relative outline-none group"
+                  className="flex-1 min-w-25 sm:min-w-0 flex flex-col items-center gap-1.5 py-4 sm:py-5 px-2 sm:px-4 transition-all duration-250 relative outline-none group"
                 >
                   <Icon
                     size={16}
-                    className={`transition-colors duration-250 ${isCurrent ? 'text-[#007bff]' : 'text-[#bebebe]/20'}`}
+                    className={`transition-colors duration-250 ${isCurrent ? 'text-fourth' : 'text-third/20'}`}
                   />
                   <span
-                    className={`font-black uppercase text-[10px] sm:text-[13px] tracking-wider whitespace-nowrap transition-colors duration-250 ${isCurrent ? 'text-[#007bff]' : 'text-[#bebebe]/25'}`}
+                    className={`font-black uppercase text-[10px] sm:text-[13px] tracking-wider whitespace-nowrap transition-colors duration-250 ${isCurrent ? 'text-fourth' : 'text-third/25'}`}
                   >
                     {c.label}
                   </span>
                   <span
-                    className={`text-[15px] tabular-nums transition-colors duration-250 ${isCurrent ? 'text-[#007bff]/50' : 'text-[#bebebe]/12'}`}
+                    className={`text-[15px] tabular-nums transition-colors duration-250 ${isCurrent ? 'text-fourth/50' : 'text-third/12'}`}
                   >
                     {c.number}
                   </span>
@@ -347,13 +347,13 @@ export default function FAQSections() {
           }}
         >
           <div className="flex items-center gap-4 mb-7 sm:mb-9">
-            <span className="font-black text-5xl sm:text-7xl leading-none select-none text-[#007bff]/12">
+            <span className="font-black text-5xl sm:text-7xl leading-none select-none text-fourth/12">
               {cat.number}
             </span>
 
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <div className="w-4 h-px bg-[#007bff]" />
+                <div className="w-4 h-px bg-fourth" />
                 <span className="text-[10px] tracking-[0.45em] uppercase font-semibold text-fourth/60">
                   {cat.tag}
                 </span>
@@ -414,7 +414,7 @@ export default function FAQSections() {
               <button
                 key={i}
                 onClick={() => switchCat(i)}
-                className={`h-1 rounded-full transition-all duration-350 ${activeCat === i ? 'w-7 bg-[#007bff]' : 'w-1.5 bg-primary/10'}`}
+                className={`h-1 rounded-full transition-all duration-350 ${activeCat === i ? 'w-7 bg-fourth' : 'w-1.5 bg-primary/10'}`}
               />
             ))}
           </div>
@@ -445,28 +445,28 @@ export default function FAQSections() {
 function QRow({ item, index, isOpen, onToggle, delay }) {
   return (
     <div
-      className="relative border-b border-[#007bff]/10 transition-colors duration-200"
+      className="relative border-b border-fourth/10 transition-colors duration-200"
       style={{ animation: `qRowIn 0.4s ${delay}s cubic-bezier(0.22,1,0.36,1) both` }}
     >
       <div
-        className={`absolute left-0 top-0 bottom-0 w-[2.5px] bg-[#007bff] rounded-full transition-transform duration-320 origin-top ${isOpen ? 'scale-y-100' : 'scale-y-0'}`}
+        className={`absolute left-0 top-0 bottom-0 w-[2.5px] bg-fourth rounded-full transition-transform duration-320 origin-top ${isOpen ? 'scale-y-100' : 'scale-y-0'}`}
       />
 
       <button onClick={onToggle} className="w-full flex items-start gap-4 text-left py-5 pl-4 pr-2 group">
         <span
-          className={`font-black text-xs shrink-0 mt-0.5 w-6 text-right tabular-nums transition-colors duration-200 ${isOpen ? 'text-[#007bff]/65' : 'text-primary/10'}`}
+          className={`font-black text-xs shrink-0 mt-0.5 w-6 text-right tabular-nums transition-colors duration-200 ${isOpen ? 'text-fourth/65' : 'text-primary/10'}`}
         >
           {String(index + 1).padStart(2, "0")}
         </span>
 
         <span
-          className={`flex-1 text-[14px] sm:text-[15px] font-semibold leading-snug transition-colors duration-200 ${isOpen ? 'text-[#007bff]' : 'text-[#fffef7]/60'}`}
+          className={`flex-1 text-[14px] sm:text-[15px] font-semibold leading-snug transition-colors duration-200 ${isOpen ? 'text-fourth' : 'text-primary/60'}`}
         >
           {item.q}
         </span>
 
         <div
-          className={`shrink-0 mt-0.5 w-5 h-5 rounded-md flex items-center justify-center transition-all duration-250 ${isOpen ? 'bg-[#007bff]/15 text-[#007bff]' : 'bg-transparent text-[#bebebe]/20'}`}
+          className={`shrink-0 mt-0.5 w-5 h-5 rounded-md flex items-center justify-center transition-all duration-250 ${isOpen ? 'bg-fourth/15 text-fourth' : 'bg-transparent text-third/20'}`}
         >
           <span className="text-m font-light leading-none">{isOpen ? "−" : "+"}</span>
         </div>
