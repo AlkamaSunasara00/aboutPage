@@ -1,3 +1,4 @@
+// app/components/support/SupportBridge.jsx
 "use client";
 
 import { useState, useRef } from "react";
@@ -52,41 +53,31 @@ const SEED_TICKETS = [
 
 export default function SupportBridge() {
   const [tickets, setTickets] = useState(SEED_TICKETS);
-  const [view, setView]       = useState("requests"); // "requests" | "flow"
+  const [view, setView] = useState("requests"); // "requests" | "flow"
 
-  const flowRef     = useRef(null);
-  const requestsRef = useRef(null);
-
-  // SupportFlow calls this on submit → add ticket + switch back to requests
   const handleTicketCreated = (newTicket) => {
     setTickets((prev) => [newTicket, ...prev]);
     setTimeout(() => {
       setView("requests");
-      setTimeout(() => requestsRef.current?.scrollIntoView({ behavior: "smooth" }), 80);
-    }, 1800); // let user see the success screen briefly
+    }, 1800);
   };
 
-  // SupportRequests "New Request" button calls this → switch to flow
-  const handleNewRequest = () => {
-    setView("flow");
-    setTimeout(() => flowRef.current?.scrollIntoView({ behavior: "smooth" }), 80);
-  };
+  const handleNewRequest = () => setView("flow");
+  const handleBackToRequests = () => setView("requests");
 
   return (
-    <div>
-      {view === "flow" && (
-        <div ref={flowRef}>
-          <SupportFlow onTicketCreated={handleTicketCreated} />
-        </div>
-      )}
-      {view === "requests" && (
-        <div ref={requestsRef}>
-          <SupportRequests
-            tickets={tickets}
-            setTickets={setTickets}
-            onNewRequest={handleNewRequest}
-          />
-        </div>
+    <div className="min-h-screen bg-secondary">
+      {view === "flow" ? (
+        <SupportFlow
+          onTicketCreated={handleTicketCreated}
+          onBack={handleBackToRequests}
+        />
+      ) : (
+        <SupportRequests
+          tickets={tickets}
+          setTickets={setTickets}
+          onNewRequest={handleNewRequest}
+        />
       )}
     </div>
   );

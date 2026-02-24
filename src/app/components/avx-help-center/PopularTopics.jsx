@@ -85,24 +85,16 @@ export default function PopularTopicsGrid() {
 
     return (
         <section className="relative py-16 px-4 sm:px-6 overflow-hidden font-secondary text-primary">
-
-          
-
             <div className="max-w-7xl mx-auto relative">
 
                 {/* ── HEADER ── */}
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-14">
                     <div>
-                        <p className="text-sm tracking-[0.4em] uppercase text-third font-semibold mb-1">
+                        <p className="text-sm tracking-[0.4em] uppercase text-third/60 font-semibold mb-1 font-primary">
                             Help Center
                         </p>
                         <h2 className="font-primary text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-none text-primary">
-                            Popular{" "}
-                            <span
-                                className="text-fourth"
-                            >
-                                Topics.
-                            </span>
+                            Popular <span className="text-fourth">Topics.</span>
                         </h2>
                     </div>
 
@@ -112,8 +104,8 @@ export default function PopularTopicsGrid() {
                 </div>
 
                 {/* ── GRID ── */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary/5 rounded-2xl overflow-hidden border border-primary/[0.07]">
-                    {topics.map((topic, i) => {
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary/10 rounded-2xl overflow-hidden border border-primary/5">
+                    {topics.map((topic) => {
                         const Icon = topic.icon;
                         const isHovered = hovered === topic.id;
                         const isBlue = topic.accent;
@@ -123,103 +115,74 @@ export default function PopularTopicsGrid() {
                                 key={topic.id}
                                 onMouseEnter={() => setHovered(topic.id)}
                                 onMouseLeave={() => setHovered(null)}
-                                className="group relative flex flex-col justify-between p-7 sm:p-8 text-left transition-all duration-300 bg-secondary overflow-hidden"
-                                style={{
-                                    backgroundColor: isHovered
-                                        ? isBlue
-                                            ? "rgba(0,123,255,0.07)"
-                                            : "rgba(255,254,247,0.03)"
-                                        : "#121212",
-                                    transition: "background-color 0.3s ease",
-                                    minHeight: "200px",
-                                }}
+                                className={`group relative flex flex-col justify-between p-7 sm:p-8 text-left transition-all duration-300 min-h-50 overflow-hidden bg-secondary outline-none ${
+                                    isHovered 
+                                        ? isBlue ? 'bg-fourth/10' : 'bg-primary/5'
+                                        : 'bg-secondary'
+                                }`}
                                 aria-label={`Go to ${topic.label}`}
                             >
                                 {/* Top accent line on hover */}
                                 <div
-                                    className="absolute top-0 left-0 right-0 h-px transition-opacity duration-300"
-                                    style={{
-                                        background: isBlue
-                                            ? "linear-gradient(90deg, transparent, rgba(0,123,255,0.7), transparent)"
-                                            : "linear-gradient(90deg, transparent, rgba(255,254,247,0.25), transparent)",
-                                        opacity: isHovered ? 1 : 0,
-                                    }}
+                                    className={`absolute top-0 left-0 right-0 h-px transition-opacity duration-300 ${
+                                        isHovered ? 'opacity-100' : 'opacity-0'
+                                    } ${
+                                        isBlue 
+                                            ? 'bg-linear-to-r from-transparent via-fourth/70 to-transparent' 
+                                            : 'bg-linear-to-r from-transparent via-primary/25 to-transparent'
+                                    }`}
                                 />
 
                                 {/* Ghost index number */}
                                 <div
-                                    className="absolute bottom-4 right-5 font-primary font-black select-none leading-none pointer-events-none transition-all duration-300"
-                                    style={{
-                                        fontSize: "clamp(3rem, 6vw, 5rem)",
-                                        color: isHovered
-                                            ? isBlue
-                                                ? "rgba(0,123,255,0.12)"
-                                                : "rgba(255,254,247,0.07)"
-                                            : isBlue
-                                                ? "rgba(0,123,255,0.05)"
-                                                : "rgba(255,254,247,0.03)",
-                                    }}
+                                    className={`absolute bottom-4 right-5 font-primary font-black select-none leading-none pointer-events-none transition-all duration-300 text-[clamp(3rem,6vw,5rem)] ${
+                                        isHovered 
+                                            ? isBlue ? 'text-fourth/15' : 'text-primary/10'
+                                            : isBlue ? 'text-fourth/5' : 'text-primary/5'
+                                    }`}
                                 >
                                     {topic.index}
                                 </div>
 
-                                {/* Icon + index row */}
-                                <div className="flex items-start justify-between mb-5">
+                                {/* Icon + Arrow row */}
+                                <div className="flex items-start justify-between mb-5 relative z-10">
                                     <div
-                                        className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-300"
-                                        style={{
-                                            backgroundColor: isHovered
-                                                ? isBlue
-                                                    ? "rgba(0,123,255,0.15)"
-                                                    : "rgba(255,255,255,0.08)"
-                                                : isBlue
-                                                    ? "rgba(0,123,255,0.08)"
-                                                    : "rgba(255,255,255,0.04)",
-                                            color: isHovered
-                                                ? isBlue
-                                                    ? "rgba(0,123,255,0.9)"
-                                                    : "rgba(255,254,247,0.7)"
-                                                : isBlue
-                                                    ? "rgba(0,123,255,0.55)"
-                                                    : "rgba(190,190,190,0.35)",
-                                        }}
+                                        className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-300 ${
+                                            isHovered 
+                                                ? isBlue ? 'bg-fourth/20 text-fourth' : 'bg-primary/10 text-primary'
+                                                : isBlue ? 'bg-fourth/10 text-fourth/60' : 'bg-primary/5 text-third/30'
+                                        }`}
                                     >
                                         <Icon size={16} />
                                     </div>
 
                                     {/* Arrow — appears on hover */}
                                     <div
-                                        className="flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-300"
-                                        style={{
-                                            opacity: isHovered ? 1 : 0,
-                                            transform: isHovered ? "translate(0,0)" : "translate(4px,-4px)",
-                                            backgroundColor: isBlue
-                                                ? "rgba(0,123,255,0.15)"
-                                                : "rgba(255,255,255,0.06)",
-                                            color: isBlue ? "#007bff" : "rgba(255,254,247,0.5)",
-                                        }}
+                                        className={`flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-300 ${
+                                            isHovered ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-1 -translate-y-1'
+                                        } ${
+                                            isBlue ? 'bg-fourth/15 text-fourth' : 'bg-primary/10 text-primary/50'
+                                        }`}
                                     >
                                         <ArrowUpRight size={12} />
                                     </div>
                                 </div>
 
-                                {/* Label */}
+                                {/* Label & Desc */}
                                 <div className="relative z-10">
                                     <p
-                                        className="font-primary font-black uppercase text-[13px] sm:text-[14px] tracking-wide leading-snug mb-2 transition-colors duration-300"
-                                        style={{
-                                            color: isHovered
-                                                ? isBlue
-                                                    ? "#007bff"
-                                                    : "#fffef7"
-                                                : "rgba(255,254,247,0.75)",
-                                        }}
+                                        className={`font-primary font-black uppercase text-[13px] sm:text-[14px] tracking-wide leading-snug mb-2 transition-colors duration-300 ${
+                                            isHovered 
+                                                ? isBlue ? 'text-fourth' : 'text-primary'
+                                                : 'text-primary/75'
+                                        }`}
                                     >
                                         {topic.label}
                                     </p>
                                     <p
-                                        className={`text-[11px] sm:text-[14px] leading-relaxed transition-colors duration-300 ${isHovered ? "text-third/80" : "text-third/60"
-                                            }`}
+                                        className={`text-[11px] sm:text-[14px] leading-relaxed transition-colors duration-300 font-secondary ${
+                                            isHovered ? 'text-third/80' : 'text-third/60'
+                                        }`}
                                     >
                                         {topic.desc}
                                     </p>
@@ -228,39 +191,7 @@ export default function PopularTopicsGrid() {
                         );
                     })}
                 </div>
-
-                {/* ── BOTTOM BAR ── */}
-                <div
-                    className="flex items-center justify-between mt-6 px-1"
-                >
-                    <div className="flex items-center gap-2">
-                        {topics.map((_, i) => (
-                            <div
-                                key={i}
-                                className="rounded-full transition-all duration-300"
-                                style={{
-                                    height: "3px",
-                                    width: hovered === topics[i].id ? "20px" : "6px",
-                                    backgroundColor:
-                                        hovered === topics[i].id
-                                            ? topics[i].accent
-                                                ? "#007bff"
-                                                : "rgba(255,255,255,0.4)"
-                                            : "rgba(255,255,255,0.07)",
-                                }}
-                            />
-                        ))}
-                    </div>
-
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-third/25">
-                        {topics.length} topics
-                    </p>
-                </div>
             </div>
-
-            <style>{`
-        .bg-secondary { background-color: #121212; }
-      `}</style>
         </section>
     );
 }

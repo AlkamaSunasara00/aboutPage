@@ -13,7 +13,6 @@ const categories = [
   { id: "disputes", number: "07", icon: Flag, label: "Disputes", tag: "Reporting" },
 ];
 
-// Content moved here to keep component clean
 const faqData = {
   buying: [
     {
@@ -53,7 +52,6 @@ const faqData = {
       a: "Consultant profiles display ratings, response metrics, and performance indicators.",
     },
   ],
-
   selling: [
     {
       q: "How do I list my vehicle?",
@@ -88,7 +86,6 @@ const faqData = {
       a: "Multiple sales may require consultant enrollment or subscription upgrade.",
     },
   ],
-
   consultant: [
     {
       q: "Who can become a consultant?",
@@ -131,7 +128,6 @@ const faqData = {
       a: "Yes. Consultants may request inspections to enhance credibility.",
     },
   ],
-
   billing: [
     {
       q: "How do I upgrade tier?",
@@ -162,7 +158,6 @@ const faqData = {
       a: "Inspection fees are non-refundable once service begins.",
     },
   ],
-
   ppc: [
     {
       q: "What is vehicle boost?",
@@ -193,7 +188,6 @@ const faqData = {
       a: "Targeting options depend on campaign configuration.",
     },
   ],
-
   account: [
     {
       q: "Can I browse without login?",
@@ -216,7 +210,6 @@ const faqData = {
       a: "Account deletion requests can be submitted through settings.",
     },
   ],
-
   disputes: [
     {
       q: "How do I report listing issue?",
@@ -280,7 +273,7 @@ export default function FAQSections() {
         {/* TOP: TITLE + META */}
         <div className="flex items-end justify-between mb-8 sm:mb-10">
           <div>
-            <p className="text-sm tracking-[0.4em] uppercase text-third font-semibold mb-2">
+            <p className="text-sm tracking-[0.4em] uppercase text-third/60 font-semibold mb-2">
               AVX · Help Center
             </p>
             <h2 className="font-black uppercase leading-none tracking-tight text-primary text-[clamp(2rem,6vw,4.5rem)]">
@@ -288,11 +281,11 @@ export default function FAQSections() {
             </h2>
           </div>
 
-          <div className="flex flex-col items-end gap-0.5 transition-all duration-300" key={cat.id + "-count"}>
-            <span className="font-black leading-none text-[clamp(2rem,5vw,3.5rem)] transition-colors duration-400 text-fourth/50">
+          <div className="flex flex-col items-end gap-0.5 transition-all duration-300">
+            <span className="font-black leading-none text-[clamp(2rem,5vw,3.5rem)] text-fourth/50 transition-colors duration-400">
               {String(items.length).padStart(2, "0")}
             </span>
-            <span className="text-[12px] text-third/50 uppercase tracking-[0.3em] font-bold">
+            <span className="text-[12px] text-third/40 uppercase tracking-[0.3em] font-bold">
               Questions
             </span>
           </div>
@@ -328,7 +321,7 @@ export default function FAQSections() {
                     {c.label}
                   </span>
                   <span
-                    className={`text-[15px] tabular-nums transition-colors duration-250 ${isCurrent ? 'text-fourth/50' : 'text-third/12'}`}
+                    className={`text-[15px] tabular-nums transition-colors duration-250 ${isCurrent ? 'text-fourth/50' : 'text-third/10'}`}
                   >
                     {c.number}
                   </span>
@@ -347,13 +340,13 @@ export default function FAQSections() {
           }}
         >
           <div className="flex items-center gap-4 mb-7 sm:mb-9">
-            <span className="font-black text-5xl sm:text-7xl leading-none select-none text-fourth/12">
+            <span className="font-black text-5xl sm:text-7xl leading-none select-none text-fourth/10">
               {cat.number}
             </span>
 
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <div className="w-4 h-px bg-fourth" />
+                <div className="w-4 h-px bg-fourth/60" />
                 <span className="text-[10px] tracking-[0.45em] uppercase font-semibold text-fourth/60">
                   {cat.tag}
                 </span>
@@ -403,7 +396,7 @@ export default function FAQSections() {
           <button
             onClick={() => switchCat(Math.max(0, activeCat - 1))}
             disabled={activeCat === 0}
-            className="flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-200 disabled:opacity-10 text-third/40 hover:text-third"
+            className="flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-200 disabled:opacity-10 text-third/30 hover:text-primary"
           >
             <span className="text-base">←</span>
             <span className="hidden sm:inline">{activeCat > 0 ? categories[activeCat - 1].label : "—"}</span>
@@ -422,7 +415,7 @@ export default function FAQSections() {
           <button
             onClick={() => switchCat(Math.min(categories.length - 1, activeCat + 1))}
             disabled={activeCat === categories.length - 1}
-            className="flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-200 disabled:opacity-10 text-third/40 hover:text-third"
+            className="flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-200 disabled:opacity-10 text-third/30 hover:text-primary"
           >
             <span className="hidden sm:inline">{activeCat < categories.length - 1 ? categories[activeCat + 1].label : "—"}</span>
             <span className="text-base">→</span>
@@ -445,7 +438,7 @@ export default function FAQSections() {
 function QRow({ item, index, isOpen, onToggle, delay }) {
   return (
     <div
-      className="relative border-b border-fourth/10 transition-colors duration-200"
+      className="relative border-b border-primary/5 transition-colors duration-200"
       style={{ animation: `qRowIn 0.4s ${delay}s cubic-bezier(0.22,1,0.36,1) both` }}
     >
       <div
@@ -454,19 +447,19 @@ function QRow({ item, index, isOpen, onToggle, delay }) {
 
       <button onClick={onToggle} className="w-full flex items-start gap-4 text-left py-5 pl-4 pr-2 group">
         <span
-          className={`font-black text-xs shrink-0 mt-0.5 w-6 text-right tabular-nums transition-colors duration-200 ${isOpen ? 'text-fourth/65' : 'text-primary/10'}`}
+          className={`font-black text-xs shrink-0 mt-0.5 w-6 text-right tabular-nums transition-colors duration-200 ${isOpen ? 'text-fourth/60' : 'text-primary/10'}`}
         >
           {String(index + 1).padStart(2, "0")}
         </span>
 
         <span
-          className={`flex-1 text-[14px] sm:text-[15px] font-semibold leading-snug transition-colors duration-200 ${isOpen ? 'text-fourth' : 'text-primary/60'}`}
+          className={`flex-1 text-[14px] sm:text-[15px] font-semibold leading-snug transition-colors duration-200 font-secondary ${isOpen ? 'text-fourth' : 'text-primary/60'}`}
         >
           {item.q}
         </span>
 
         <div
-          className={`shrink-0 mt-0.5 w-5 h-5 rounded-md flex items-center justify-center transition-all duration-250 ${isOpen ? 'bg-fourth/15 text-fourth' : 'bg-transparent text-third/20'}`}
+          className={`shrink-0 mt-0.5 w-5 h-5 rounded-md flex items-center justify-center transition-all duration-250 ${isOpen ? 'bg-fourth/15 text-fourth' : 'bg-primary/5 text-third/20'}`}
         >
           <span className="text-m font-light leading-none">{isOpen ? "−" : "+"}</span>
         </div>
@@ -476,7 +469,7 @@ function QRow({ item, index, isOpen, onToggle, delay }) {
         className="overflow-hidden transition-[max-height] duration-380 ease-[cubic-bezier(0.22,1,0.36,1)]"
         style={{ maxHeight: isOpen ? "260px" : "0" }}
       >
-        <p className="pl-10 pr-4 pb-5 text-sm sm:text-[15px] leading-relaxed text-third/55">
+        <p className="pl-10 pr-4 pb-5 text-sm sm:text-[15px] leading-relaxed text-third/50 font-secondary">
           {item.a}
         </p>
       </div>

@@ -122,7 +122,7 @@ export default function HelpHero() {
               onFocus={() => setFocused(true)}
               onBlur={() => setTimeout(() => setFocused(false), 200)}
               placeholder='Try "inspection", "listing issue", "tier upgrade", "refund"'
-              className="flex-1 min-w-0 bg-transparent border-none outline-none text-primary text-[0.92rem] font-secondary tracking-wide placeholder:text-primary/20"
+              className="flex-1 min-w-0 bg-transparent border-none outline-none text-primary text-[0.92rem] font-secondary tracking-wide placeholder:text-primary/20 placeholder:tracking-[0.08em]"
             />
 
             {query && (
